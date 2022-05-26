@@ -1,5 +1,4 @@
-# my-unraid-docker-templates
-Unraid Nas 的一些容器安装模板
+# Unraid Nas 的一些容器安装模板
 
 模板内置另外一个项目的高清图标，项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)
 
