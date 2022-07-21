@@ -48,11 +48,6 @@ icon=(\
 [9]="Vaultwarden SQLite版" \
 [10]="Filebrowser_80x86 荒野无灯版"\
 )
-# mkdir -p /boot/config/HD-Icons/border-radius && cd /boot/config/HD-Icons/border-radius
-# wget https://raw.fastgit.org/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png
-
-# cd /boot/config/plugins/dockerMan/templates-user
-# wget https://raw.fastgit.org/xushier/my-unraid-docker-templates/main/my-${template[$container_num]}.xml
 
 while :
 do
@@ -64,7 +59,7 @@ do
     str=$'\n'
     
 	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
-	if [ "$container_num" == $str ];then
+	if [ $container_num == $str ];then
 		echo -e "\n手动退出......"
 		break
 
