@@ -56,14 +56,14 @@ icon=(\
 
 while :
 do
-	for key in $(echo ${!container[*]})
+	for key in $(seq ${#container[@]})
 	do
 	    echo "$key : ${container[$key]}"
 	done
 	
     str=$'\n'
     
-	read -p "$str请选择容器序号（1到${#container[@]}，回车直接退出）：" container_num
+	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
 	if [ $container_num == $str ];then
 		echo -e "\n手动退出......"
 		break
@@ -77,7 +77,7 @@ do
 		break
 	fi
 	if [ $conf == "n" ];then
-		echo -e "\n )~!~(这都能输错，小迪一脸嫌弃 )~!~(\n"
+		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
 		continue
 	fi
 	echo -e "\n手动退出......"
