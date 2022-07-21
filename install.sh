@@ -1,10 +1,8 @@
 #!/bin/bash
 
 declare -A container template icon
-xdtx_icon_dir="/root"
-xdtx_template_dir="/root"
-# xdtx_icon_dir="/boot/config/HD-Icons/border-radius"
-# xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
+xdtx_icon_dir="/boot/config/HD-Icons/border-radius"
+xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
 raw_domain="https://raw.githubusercontent.com"
 raw_mirror="https://raw.fastgit.org"
 
