@@ -12,16 +12,16 @@ if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速�
 
 container=(\
 [1]="QB_80x86 荒野无灯版" \
-[2]="QB_Linuxserver 版" \
+[2]="QB_LS 版" \
 [3]="QB_NVEE 多功能版" \
-[4]="QB_快检版" \
+[4]="QB_CB 快检版" \
 [5]="QB_EE BT增强版" \
-[6]="TR_LinuxServer 版" \
-[7]="TR 快检版" \
-[8]="Aria2NG 下载器" \
-[9]="Vaultwarden SQLite版" \
+[6]="TR_LS 版" \
+[7]="TR_CB 快检版" \
+[8]="Aria2NG_Oldiy 版" \
+[9]="Vaultwarden_SQLite 版" \
 [10]="Filebrowser_80x86 荒野无灯版" \
-[11]="Filebrowser_80x86 荒野无灯版" \
+[11]="Filebrowser_OF 官方版" \
 )
 
 template=(\
@@ -30,11 +30,12 @@ template=(\
 [3]="Qbittorrent_NVEE" \
 [4]="Qbittorrent_CB" \
 [5]="Qbittorrent_EE" \
-[6]="TR_LinuxServer 版" \
-[7]="TR 快检版" \
-[8]="Aria2NG 下载器" \
-[9]="Vaultwarden SQLite版" \
-[10]="Filebrowser_80x86 荒野无灯版"\
+[6]="Transmission_LS" \
+[7]="Transmission_CB" \
+[8]="Aria2NG_Oldiy" \
+[9]="Vaultwarden_SQLite" \
+[10]="Filebrowser_80x86"\
+[11]="Filebrowser_OF" \
 )
 
 icon=(\
@@ -43,11 +44,12 @@ icon=(\
 [3]="Qbittorrent_A" \
 [4]="Qbittorrent_A" \
 [5]="Qbittorrent_B" \
-[6]="TR_LinuxServer 版" \
-[7]="TR 快检版" \
-[8]="Aria2NG 下载器" \
-[9]="Vaultwarden SQLite版" \
-[10]="Filebrowser_80x86 荒野无灯版"\
+[6]="Transmission_A" \
+[7]="Transmission_B" \
+[8]="AriaNgNative_B" \
+[9]="Bitwarden" \
+[10]="Filebrowser"\
+[11]="Filebrowser" \
 )
 
 while :
