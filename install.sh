@@ -56,12 +56,13 @@ do
 	    echo "$key : ${container[$key]}"
 	done
 	
-    str=$'\n'
+	str=$'\n'
     
 	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
 	if [ $container_num == $str ];then
 		echo -e "\n手动退出......"
 		break
+	fi
 
 	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 	if [ $conf == "y" ];then
