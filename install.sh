@@ -7,6 +7,10 @@ xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
 raw_domain="https://raw.githubusercontent.com"
 raw_mirror="https://raw.fastgit.org"
 
+if $1;then domain=$raw_mirror;else domain=$raw_domain
+
+echo $domain
+
 container=(\
 [1]="QB_80x86 荒野无灯版" \
 [2]="QB_Linuxserver 版" \
@@ -64,8 +68,8 @@ do
 
 	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 	if [[ $conf == "y" ]];then
-		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && wget -N "$raw_domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n下载完毕。\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n"
-		cd $xdtx_template_dir && wget -N "$raw_domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n执行完毕。\n图标文件位于 $xdtx_icon_dir\n模板文件位于 $xdtx_template_dir\n在容器界面点击添加容器，选择模板即可。"
+		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && wget -N "$domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n下载完毕。\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n"
+		cd $xdtx_template_dir && wget -N "$domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n执行完毕。\n图标文件位于 $xdtx_icon_dir\n模板文件位于 $xdtx_template_dir\n在容器界面点击添加容器，选择模板即可。"
 		echo -e "\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿\n"
 		break
 	fi
