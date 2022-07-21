@@ -1,8 +1,6 @@
 #!/bin/bash
 
-declare -A container
-declare -A template
-declare -A icon
+declare -A container template icon
 
 xdtx_icon_dir="/boot/config/HD-Icons/border-radius"
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
@@ -59,7 +57,7 @@ do
 	str=$'\n'
     
 	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
-	if [ $container_num == $str ];then
+	if [[ $container_num == $str ]];then
 		echo -e "\n手动退出......"
 		break
 	fi
