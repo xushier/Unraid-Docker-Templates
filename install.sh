@@ -64,22 +64,46 @@ do
     str=$'\n'
     
 	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
-	if [ $container_num == $str ];then
+	if [ $container_num != $str ];then
+		read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
+		if [ $conf == "y" ];then
+			mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && wget -N "$raw_domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n下载完毕。\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n"
+			cd $xdtx_template_dir && wget -N "$raw_domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n执行完毕。\n图标文件位于 $xdtx_icon_dir\n模板文件位于 $xdtx_template_dir\n在容器界面点击添加容器，选择模板即可。"
+			echo -e "\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿\n"
+			break
+		fi
+		if [ $conf == "n" ];then
+			echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
+			continue
+		fi
+	else
 		echo -e "\n手动退出......"
 		break
 	fi
-	
-	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
-	if [ $conf == "y" ];then
-		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && wget -N "$raw_domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n下载完毕。\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n"
-		cd $xdtx_template_dir && wget -N "$raw_domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n执行完毕。\n图标文件位于 $xdtx_icon_dir\n模板文件位于 $xdtx_template_dir\n在容器界面点击添加容器，选择模板即可。"
-		echo -e "\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿\n"
-		break
-	fi
-	if [ $conf == "n" ];then
-		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
-		continue
-	fi
-	echo -e "\n手动退出......"
-	break
 done
+	
+
+
+
+
+
+
+
+
+
+
+
+# 	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
+# 	if [ $conf == "y" ];then
+# 		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && wget -N "$raw_domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n下载完毕。\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n"
+# 		cd $xdtx_template_dir && wget -N "$raw_domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n执行完毕。\n图标文件位于 $xdtx_icon_dir\n模板文件位于 $xdtx_template_dir\n在容器界面点击添加容器，选择模板即可。"
+# 		echo -e "\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿\n"
+# 		break
+# 	fi
+# 	if [ $conf == "n" ];then
+# 		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
+# 		continue
+# 	fi
+# 	echo -e "\n手动退出......"
+# 	break
+# done
