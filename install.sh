@@ -7,7 +7,7 @@ xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
 raw_domain="https://raw.githubusercontent.com"
 raw_mirror="https://raw.fastgit.org"
 
-if $1;then domain=$raw_mirror;else domain=$raw_domain
+if $1;then domain=$raw_mirror;else domain=$raw_domain;fi
 
 echo $domain
 
