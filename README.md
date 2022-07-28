@@ -16,4 +16,5 @@ wget -qN https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh
 ```
 根据序号选择对应的模板，完成之后在 Unraid Docker 界面添加容器，找到并选择模板，根据实际需要修改部分参数即可。
 
-# 当前可用模板
+# 当前可用容器模板
+
