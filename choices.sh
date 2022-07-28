@@ -9,17 +9,17 @@ raw_mirror="https://raw.fastgit.org"
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
 
 container=(\
-[1]="QB_80x86 荒野无灯版" \
-[2]="QB_LS 版" \
-[3]="QB_NVEE 多功能版" \
-[4]="QB_CB 快检版" \
-[5]="QB_EE BT增强版" \
-[6]="TR_LS 版" \
-[7]="TR_CB 快检版" \
-[8]="Aria2NG_Oldiy 版" \
-[9]="Vaultwarden_SQLite 版" \
-[10]="Filebrowser_80x86 荒野无灯版" \
-[11]="Filebrowser_OF 官方版" \
+[1]="(【PT 下载器】QB_80x86 荒野无灯版" \
+[2]="【PT 下载器】QB_LS 版" \
+[3]="【PT 下载器】QB_NVEE 多功能版" \
+[4]="【PT 下载器】QB_CB 快检版" \
+[5]="【BT 下载器】QB_EE BT增强版" \
+[6]="【PT 下载器】TR_LS 版" \
+[7]="【PT 下载器】TR_CB 快检版" \
+[8]="【BT 下载器】Aria2NG_Oldiy 版" \
+[9]="【密码管理器】Vaultwarden_SQLite 版" \
+[10]="【文件管理器】Filebrowser_80x86 荒野无灯版" \
+[11]="【文件管理器】Filebrowser_OF 官方版" \
 )
 
 template=(\
