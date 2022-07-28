@@ -9,7 +9,7 @@ raw_mirror="https://raw.fastgit.org"
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
 
 container=(\
-[1]="(【PT 下载器】QB_80x86 荒野无灯版" \
+[1]="【PT 下载器】QB_80x86 荒野无灯版" \
 [2]="【PT 下载器】QB_LS 版" \
 [3]="【PT 下载器】QB_NVEE 多功能版" \
 [4]="【PT 下载器】QB_CB 快检版" \
