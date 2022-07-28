@@ -17,7 +17,7 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>http://127.0.0.1//boot/config/HD-Icons/border-radius/Qbittorrent.png</Icon>
+  <Icon>/boot/config/HD-Icons/border-radius/Qbittorrent.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
