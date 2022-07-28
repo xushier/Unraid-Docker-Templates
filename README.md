@@ -4,9 +4,8 @@
 - 脚本会将图标下载到`/boot/config/HD-Icons/`并将容器图标替换。
 - 图标项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)
 
-例：
-
-QB 模板下载，在 unraid 命令行执行：
+# 使用方法
+在 unraid 命令行执行：
 ```
 wget -qN https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
@@ -15,5 +14,4 @@ wget -qN https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/
 ```
 wget -qN https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
-
-完毕之后在 Unraid 界面添加容器，找到模板，修改下载目录即可。
+根据序号选择对应的模板，完成之后在 Unraid Docker 界面添加容器，找到并选择模板，根据实际需要修改部分参数即可。
