@@ -1,6 +1,8 @@
 # Unraid Nas 的一些容器安装模板
 
-模板内置另外一个项目的高清图标，项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)
+- 模板内置另外一个项目的高清图标。
+- 脚本会将图标下载到`/boot/config/HD-Icons/`并将容器图标替换。
+- 图标项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)
 
 例：
 
