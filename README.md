@@ -21,8 +21,8 @@ wget -qN https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh
 |模板|模板|模板|模板|模板|模板|模板|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |**Qbittorrent**|**Transmission**|**Aria2**|**115网盘**|**百度网盘**|**阿里云盘**|Alist|
-|80x86|2|百度网盘|1|Bark|1|Bitwarden|1|
-|Linuxserver|1|Chrome|1|Docker|1|Draw.io|1|
-|Nvinee|1|EpicGames|1|FileBrowser|1|FreshRSS|2|
-|EnhancedEdition|4|IYUU|1|Jellyfin|2|可道云|1|
-|Koodo Reader|1|Kutt|1|Lomorage|1|MariaDB|2|
+|80x86||||||||
+|Linuxserver||||||||
+|Nvinee||||||||
+|EnhancedEdition||||||||
+|||||||||
