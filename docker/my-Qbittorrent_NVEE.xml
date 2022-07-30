@@ -15,7 +15,7 @@ Converted By Community Applications   Always verify this template (and values)  
 &#xD;
 https://hub.docker.com/r/nevinee/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:1911]</WebUI>
   <TemplateURL/>
   <Icon>/boot/config/HD-Icons/Qbittorrent.png</Icon>
   <ExtraParams/>
