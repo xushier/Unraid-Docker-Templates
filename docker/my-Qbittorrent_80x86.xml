@@ -17,7 +17,7 @@ https://hub.docker.com/r/80x86/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1911]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/Qbittorrent.png</Icon>
+  <Icon>/boot/config/HD-Icons/Qbittorrent_A.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
