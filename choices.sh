@@ -21,6 +21,7 @@ container=(\
 [9]="【密码管理器】Vaultwarden_SQLite 版" \
 [10]="【文件管理器】Filebrowser_80x86 荒野无灯版" \
 [11]="【文件管理器】Filebrowser_OF 官方版" \
+[12]="【青龙面板】青龙面板 官方版" \
 )
 
 template=(\
@@ -35,6 +36,7 @@ template=(\
 [9]="Vaultwarden_SQLite" \
 [10]="Filebrowser_80x86" \
 [11]="Filebrowser_OF" \
+[12]="Qinglong_B" \
 )
 
 icon=(\
@@ -49,6 +51,7 @@ icon=(\
 [9]="Bitwarden" \
 [10]="Filebrowser" \
 [11]="Filebrowser" \
+[12]="Qinglong_B" \
 )
 
 while :
