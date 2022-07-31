@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qbittorrent_CB</Name>
+  <Repository>chisbread/qbittorrent:v4.2.5</Repository>
+  <Registry>https://hub.docker.com/r/chisbread/qbittorrent/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/chisbread/qbittorrent/</Support>
+  <Project/>
+  <Overview>&#x4E3A;pt&#x4E0B;&#x8F7D;&#x5B9A;&#x5236;&#x7684;&#x201C;&#x5FEB;&#x901F;hash&#x6821;&#x9A8C;&#x201D;&#x7248;qbittorrent, &#x76F8;&#x5173;&#x4FEE;&#x6539;&#x89C1; https://github.com/ChisBread/libtorrent&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/chisbread/qbittorrent/</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:1912]</WebUI>
+  <TemplateURL/>
+  <Icon>/boot/config/HD-Icons/Qbittorrent_A.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1658994826</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/Qbittorrent_CB" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_CB</Config>
+  <Config Name="Trans Port" Target="56689" Default="56689" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">56689</Config>
+  <Config Name="Trans Port" Target="56689" Default="56689" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">56689</Config>
+  <Config Name="WEBUI" Target="1912" Default="1912" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">1912</Config>
+  <Config Name="Data" Target="/downloads" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="PORT" Target="WEBUI_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1912</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+</Container>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qbittorrent_LS</Name>
+  <Repository>linuxserver/qbittorrent:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/qbittorrent</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-qbittorrent/issues/new/choose</Support>
+  <Project>https://www.qbittorrent.org/</Project>
+  <Overview>The Qbittorrent(https://www.qbittorrent.org/) project aims to provide an open-source software alternative to &#xB5;Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:1915]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/qbittorrent.xml</TemplateURL>
+  <Icon>/boot/config/HD_Icons/Qbittorrent_A.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1650690775</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The Qbittorrent(https://www.qbittorrent.org/) project aims to provide an open-source software alternative to &#xB5;Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1915</HostPort>
+        <ContainerPort>1915</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>56688</HostPort>
+        <ContainerPort>56688</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>56688</HostPort>
+        <ContainerPort>56688</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Qbittorrent_LS</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1915</Value>
+      <Name>WEBUI_PORT</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PUID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PGID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>022</Value>
+      <Name>UMASK</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="1915" Default="1915" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">1915</Config>
+  <Config Name="Port: 6881" Target="56688" Default="56688" Mode="tcp" Description="tcp connection port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
+  <Config Name="Port: 6881" Target="56688" Default="56688" Mode="udp" Description="udp connection port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
+  <Config Name="Path: /downloads" Target="/downloads" Default="" Mode="rw" Description="Location of downloads on disk." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="WEBUI_PORT" Target="WEBUI_PORT" Default="1915" Mode="{3}" Description="for changing the port of the webui, see below for explanation" Type="Variable" Display="always" Required="true" Mask="false">1915</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/Qbittorrent_LS" Mode="rw" Description="Contains all relevant configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_LS</Config>
+  <Config Name="PUID" Target="PUID" Default="0" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="0" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

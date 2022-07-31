@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qbittorrent_EE</Name>
+  <Repository>superng6/qbittorrentee</Repository>
+  <Registry>https://hub.docker.com/r/superng6/qbittorrentee/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/superng6/qbittorrentee/</Support>
+  <Project/>
+  <Overview> qBittorrent&#x589E;&#x5F3A;&#x7248;&#xFF0C;&#x9632;&#x5438;&#x8840;&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/superng6/qbittorrentee/</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:1922]</WebUI>
+  <TemplateURL/>
+  <Icon>/boot/config/HD-Icons/Qbittorrent_B.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1655358223</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/Qbittorrent_EE" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_EE</Config>
+  <Config Name="Downloads" Target="/downloads" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="TCP_PORT" Target="6881" Default="6888" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6888</Config>
+  <Config Name="UDP_PORT" Target="6881" Default="6888" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">6888</Config>
+  <Config Name="WebUI" Target="1922" Default="1922" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">1922</Config>
+  <Config Name="WEBUI_PORT" Target="WEBUIPORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1922</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+</Container>
