@@ -1,7 +1,5 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh
-
 declare -A container template icon
 xdtx_icon_dir="/boot/config/HD-Icons"
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
@@ -9,6 +7,7 @@ raw_domain="https://raw.githubusercontent.com"
 raw_mirror="https://raw.fastgit.org"
 
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
+if [[ $1 == 2 ]];then curl https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
 
 container=(\
 [1]="【PT 下载器】QB_80x86 荒野无灯版" \
