@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Qbittorrent_Nevinee</Name>
+  <Name>Qbittorrent_NVEE</Name>
   <Repository>nevinee/qbittorrent:latest</Repository>
   <Registry>https://hub.docker.com/r/nevinee/qbittorrent/</Registry>
   <Network>bridge</Network>
@@ -17,7 +17,7 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1911]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/Qbittorrent.png</Icon>
+  <Icon>/boot/config/HD-Icons/Qbittorrent_A.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -51,27 +51,27 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Qbittorrent_Nevinee/config</HostDir>
+      <HostDir>/mnt/user/appdata/Qbittorrent_NVEE/config</HostDir>
       <ContainerDir>/data/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Qbittorrent_Nevinee/data</HostDir>
+      <HostDir>/mnt/user/appdata/Qbittorrent_NVEE/data</HostDir>
       <ContainerDir>/data/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/</HostDir>
       <ContainerDir>/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Qbittorrent_Nevinee/webui</HostDir>
+      <HostDir>/mnt/user/appdata/Qbittorrent_NVEE/webui</HostDir>
       <ContainerDir>/data/webui</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Qbittorrent_Nevinee/watch</HostDir>
+      <HostDir>/mnt/user/appdata/Qbittorrent_NVEE/watch</HostDir>
       <ContainerDir>/data/watch</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -93,12 +93,12 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Description>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1000</Value>
+      <Value>0</Value>
       <Name>PUID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>100</Value>
+      <Value>0</Value>
       <Name>PGID</Name>
       <Mode/>
     </Variable>
@@ -118,7 +118,7 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Description>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>10 </Value>
+      <Value>10</Value>
       <Name>TRACKER_ERROR_COUNT_MIN</Name>
       <Mode/>
     </Variable>
@@ -143,7 +143,7 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Description>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>&#x4F8B;&#x5982;&#xFF1A;192.168.1.6</Value>
+      <Value></Value>
       <Name>MONITOR_IP</Name>
       <Mode/>
     </Variable>
@@ -152,16 +152,16 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Description>
   <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; WEBUI &#x8BBF;&#x95EE;&#x7AEF;&#x53E3;" Target="1911" Default="1911" Mode="tcp" Description="&#x7AEF;&#x53E3;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x7AEF;&#x53E3;: 1911 &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; WEBUI &#x8BBF;&#x95EE;&#x7AEF;&#x53E3;&#xFF0C;&#x4EC5;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#x9700;&#x8BBE;&#x7F6E;" Type="Port" Display="always" Required="false" Mask="false">1911</Config>
   <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; &#x6570;&#x636E;&#x4F20;&#x8F93; TCP &#x7AEF;&#x53E3;" Target="56688" Default="56688" Mode="tcp" Description="&#x7AEF;&#x53E3;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x7AEF;&#x53E3;: 56688 &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x6570;&#x636E;&#x4F20;&#x8F93; &#13;&#10; TCP &#x7AEF;&#x53E3;&#xFF0C;&#x4EC5;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#x9700;&#x8BBE;&#x7F6E;" Type="Port" Display="always" Required="false" Mask="false">56688</Config>
   <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; &#x6570;&#x636E;&#x4F20;&#x8F93; UDP &#x7AEF;&#x53E3;" Target="56688" Default="56688" Mode="udp" Description="&#x7AEF;&#x53E3;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x7AEF;&#x53E3;: 56688 &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x6570;&#x636E;&#x4F20;&#x8F93; &#13;&#10; UDP &#x7AEF;&#x53E3;&#xFF0C;&#x4EC5;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#x9700;&#x8BBE;&#x7F6E;" Type="Port" Display="always" Required="false" Mask="false">56688</Config>
-  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x914D;&#x7F6E; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/config" Default="/mnt/user/appdata/Qbittorrent-Nevinee/config" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/config &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x914D;&#x7F6E;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_Nevinee/config</Config>
-  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x79CD;&#x5B50;&#x53CA;&#x76F8;&#x5173;&#x6821;&#x9A8C;&#x6587;&#x4EF6; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/data" Default="/mnt/user/appdata/Qbittorrent-Nevinee/data" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/data &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x79CD;&#x5B50;&#x53CA;&#x76F8;&#x5173;&#x6821;&#x9A8C;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_Nevinee/data</Config>
+  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x914D;&#x7F6E; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/config" Default="/mnt/user/appdata/Qbittorrent-NVEE/config" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/config &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x914D;&#x7F6E;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_NVEE/config</Config>
+  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x79CD;&#x5B50;&#x53CA;&#x76F8;&#x5173;&#x6821;&#x9A8C;&#x6587;&#x4EF6; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/data" Default="/mnt/user/appdata/Qbittorrent-NVEE/data" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/data &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x79CD;&#x5B50;&#x53CA;&#x76F8;&#x5173;&#x6821;&#x9A8C;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_NVEE/data</Config>
   <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; &#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x4F4D;&#x7F6E;" Target="/downloads" Default="" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/downloads &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x7B2C;&#x4E09;&#x65B9;&#x4E3B;&#x9898; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/webui" Default="/mnt/user/appdata/Qbittorrent-Nevinee/webui" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/webui &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x7B2C;&#x4E09;&#x65B9;&#x4E3B;&#x9898; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_Nevinee/webui</Config>
-  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; &#x76D1;&#x89C6;&#x79CD;&#x5B50;&#x4F4D;&#x7F6E;" Target="/data/watch" Default="/mnt/user/appdata/Qbittorrent-Nevinee/watch" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/watch &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x76D1;&#x89C6;&#x79CD;&#x5B50;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_Nevinee/watch</Config>
+  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; QB &#x7B2C;&#x4E09;&#x65B9;&#x4E3B;&#x9898; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Target="/data/webui" Default="/mnt/user/appdata/Qbittorrent-NVEE/webui" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/webui &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; QB &#x7B2C;&#x4E09;&#x65B9;&#x4E3B;&#x9898; &#x5B58;&#x653E;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_NVEE/webui</Config>
+  <Config Name="&#x5BB9;&#x5668;&#x5916;&#x90E8; &#x76D1;&#x89C6;&#x79CD;&#x5B50;&#x4F4D;&#x7F6E;" Target="/data/watch" Default="/mnt/user/appdata/Qbittorrent-NVEE/watch" Mode="rw" Description="&#x8DEF;&#x5F84;&#x6620;&#x5C04;_&#x5BB9;&#x5668;&#x8DEF;&#x5F84;: /data/watch &#x2014;&#x2014; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x76D1;&#x89C6;&#x79CD;&#x5B50;&#x4F4D;&#x7F6E;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_NVEE/watch</Config>
   <Config Name="INSTALL_PYTHON" Target="INSTALL_PYTHON" Default="false | true" Mode="" Description="&#x53D8;&#x91CF;: INSTALL_PYTHON &#x2014;&#x2014; &#x662F;&#x5426;&#x5B89;&#x88C5; Python&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x542F;&#x7528; BT &#x641C;&#x7D22;&#xFF0C;&#x9700;&#x5F00;&#x542F;&#xFF0C;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false </Config>
   <Config Name="ENABLE_AUTO_CATEGORY" Target="ENABLE_AUTO_CATEGORY" Default="true | false" Mode="" Description="&#x53D8;&#x91CF;: ENABLE_AUTO_CATEGORY &#x2014;&#x2014; &#x662F;&#x5426;&#x542F;&#x7528;&#x81EA;&#x52A8;&#x5206;&#x7C7B;&#xFF0C;&#x9ED8;&#x8BA4;&#x542F;&#x7528;" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true </Config>
   <Config Name="DL_FINISH_NOTIFY" Target="DL_FINISH_NOTIFY" Default="false | true" Mode="" Description="&#x53D8;&#x91CF;: DL_FINISH_NOTIFY &#x2014;&#x2014; &#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E; &#x662F;&#x5426;&#x901A;&#x77E5;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x901A;&#x77E5;" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false </Config>
-  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="&#x53D8;&#x91CF;: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="&#x53D8;&#x91CF;: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="0" Mode="" Description="&#x53D8;&#x91CF;: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="0" Mode="" Description="&#x53D8;&#x91CF;: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
   <Config Name="WEBUI_PORT" Target="WEBUI_PORT" Default="1911" Mode="" Description="&#x53D8;&#x91CF;: WEBUI_PORT &#x2014;&#x2014; &#x6307;&#x5B9A; &#x5BB9;&#x5668;&#x5185;&#x90E8; WEBUI &#x8BBF;&#x95EE;&#x6240;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;Host &#x6A21;&#x5F0F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8BE5;&#x7AEF;&#x53E3;&#x8BBF;&#x95EE;&#xFF0C;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#x9700;&#x4FEE;&#x6539;&#x7B2C;&#x4E00;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x5BB9;&#x5668;&#x5185;&#x90E8;&#x7AEF;&#x53E3;&#x4E0E;&#x8FD9;&#x91CC;&#x4E00;&#x81F4;&#xFF0C;&#x9ED8;&#x8BA4; 1911" Type="Variable" Display="advanced" Required="true" Mask="false">1911</Config>
   <Config Name="BT_PORT" Target="BT_PORT" Default="56688" Mode="" Description="&#x53D8;&#x91CF;: BT_PORT &#x2014;&#x2014; &#x6307;&#x5B9A; &#x5BB9;&#x5668;&#x5185;&#x90E8; &#x4F20;&#x8F93;&#x6570;&#x636E; &#x6240;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;Host &#x6A21;&#x5F0F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8BE5;&#x7AEF;&#x53E3;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#x9700;&#x4FEE;&#x6539;&#x7B2C;&#x4E8C;&#x3001;&#x4E09;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x5BB9;&#x5668;&#x5185;&#x90E8;&#x7AEF;&#x53E3;&#x4E0E;&#x8FD9;&#x91CC;&#x4E00;&#x81F4;&#xFF0C;&#x9ED8;&#x8BA4; 56688" Type="Variable" Display="advanced" Required="true" Mask="false">56688</Config>
   <Config Name="TZ" Target="TZ" Default="Asia/Shanghai" Mode="" Description="&#x53D8;&#x91CF;: TZ &#x2014;&#x2014; &#x65F6;&#x533A;&#xFF0C;&#x9ED8;&#x8BA4; &#x4E9A;&#x6D32;/&#x4E0A;&#x6D77;" Type="Variable" Display="advanced" Required="true" Mask="false">Asia/Shanghai</Config>
