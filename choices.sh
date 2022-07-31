@@ -53,6 +53,7 @@ icon=(\
 
 while :
 do
+	echo -e "\n传入参数 1，使用镜像地址。例：sh choices.sh 1\n传入参数 2，更新脚本。例：sh choices.sh 2\n"
 	for key in $(seq ${#container[@]})
 	do
 	    echo "$key : ${container[$key]}"
