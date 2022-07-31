@@ -1,7 +1,5 @@
 #!/bin/bash
 
-wget -qN https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
-
 declare -A container template icon
 xdtx_icon_dir="/boot/config/HD-Icons"
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
@@ -60,6 +58,7 @@ do
 	done
 	
 	str=$'\n'
+	hr="\n--------------------------------------------------------------------------------"
     
 	read -p "$str请选择模板序号（1到${#container[@]}，回车直接退出）：" container_num
 	if [ $container_num == $str ];then
@@ -69,9 +68,9 @@ do
 
 	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 	if [[ $conf == "y" ]] || [[ $conf == "Y" ]];then
-		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && echo -e "\n--------------------------------------------------------------------------------\n开始下载图标文件\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n" && curl -O "$domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n图标下载完毕。\n--------------------------------------------------------------------------------"
-		cd $xdtx_template_dir && echo -e "\n--------------------------------------------------------------------------------\n开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n"&& curl -O "$domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。\n--------------------------------------------------------------------------------"
-		echo -e "\n--------------------------------------------------------------------------------\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿\n--------------------------------------------------------------------------------\n"
+		mkdir -p $xdtx_icon_dir && cd $xdtx_icon_dir && echo -e "$hr\n开始下载图标文件\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n" && curl -O "$domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && echo -e "\n图标下载完毕。$hr"
+		cd $xdtx_template_dir && echo -e "$hr\n开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n"&& curl -O "$domain/xushier/my-unraid-docker-templates/main/docker/my-${template[$container_num]}.xml" && sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
+		echo -e "$hr\n图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr\n"
 		break
 	fi
 	if [[ $conf == "n" ]] || [[ $conf == "N" ]];then
