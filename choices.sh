@@ -1,5 +1,7 @@
 #!/bin/bash
 
+wget -qN https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
+
 declare -A container template icon
 xdtx_icon_dir="/boot/config/HD-Icons"
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
