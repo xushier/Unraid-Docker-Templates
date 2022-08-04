@@ -1,13 +1,14 @@
 #!/bin/bash
 
 declare -A container template icon
-xdtx_icon_dir="/boot/config/HD-Icons"
-xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
+
+file=("autostart" "name" "description" "docker-compose.yml" "docker-compose.override.yml" ".env")
+xdtx_template_dir="/boot/config/plugins/compose.manager/projects"
 raw_domain="https://raw.githubusercontent.com"
-raw_mirror="https://raw.fastgit.org"
+raw_mirror="https://ghproxy.com/$raw_domain"
 
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
-if [[ $1 == 2 ]];then curl https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
+if [[ $1 == 2 ]];then curl $raw_mirror/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
 
 container=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
@@ -20,6 +21,21 @@ template=(\
 icon=(\
 [1]="Bitwarden" \
 )
+
+
+
+
+mkdir -p $xdtx_template_dir/$container_name && cd $xdtx_template_dir/$container_name
+for f in ${file}
+do
+	curl -O "$domain/xushier/Unraid-Docker-Templates/main/${template[$container_num]}/$f"
+done
+
+
+
+xdtx_icon_dir="/boot/config/HD-Icons"
+
+
 
 while :
 do
