@@ -1,5 +1,4 @@
 #!/bin/bash
-
 declare -A container_edition compose_name
 compose_dir="/boot/config/plugins/compose.manager/projects"
 raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main"
