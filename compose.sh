@@ -21,6 +21,7 @@ hr="\n--------------------------------------------------------------------------
 
 while :
 do
+	echo -e "开始\n$hr"
 	echo -e "\n传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2\n"
 	echo -e "$hr"
 	for key in $(seq ${#container_edition[@]})
@@ -32,7 +33,7 @@ do
 
 	read -p "$str请选择模板序号（1到${#container_edition[@]}，回车直接退出）：" container_num
 
-	if [ "$container_num" = $str ];then
+	if test $container_num = $str;then
 		echo -e "\n手动退出......"
 		break
 	fi
@@ -45,10 +46,12 @@ do
         mkdir -p $compose_dir/${compose_name[$container_num]} && cd $_
         for f in ${file[@]}
         do
-            curl -O "$domain/${compose_name[$container_num]}/$f" > /dev/null
+            curl -sO "$domain/${compose_name[$container_num]}/$f"
+			echo -e "${compose_name[$container_num]}--$f 下载完成"
         done
 		echo -e "$hr"
 		echo -e "下载完毕，进入 compsoe.manager 插件界面启动即可。"
+		echo -e "\n结束\n$hr"
 		continue
 	fi
 
@@ -57,7 +60,7 @@ do
 		continue
 	fi
 
-	if [ "$conf" = $str ];then
+	if test $container_num = $str;then
 		echo -e "\n手动退出......"
 		break
 	fi
