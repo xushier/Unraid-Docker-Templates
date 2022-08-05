@@ -40,7 +40,10 @@ do
         for f in ${file}
         do
             curl -O "$domain/${compose_name[$container_num]}/$f"
+			echo "$domain/${compose_name[$container_num]}/$f"
         done
+		echo -e "下载完毕"
+		continue
 	fi
 	if [[ $conf == "n" ]] || [[ $conf == "N" ]];then
 		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
