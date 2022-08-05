@@ -37,7 +37,7 @@ do
 	read -p "$str你选择的是：${container_edition[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 	if [[ $conf == "y" ]] || [[ $conf == "Y" ]];then
         mkdir -p $compose_dir/${compose_name[$container_num]} && cd $compose_dir/${compose_name[$container_num]}
-        for f in ${file}
+        for f in ${file[@]}
         do
             curl -O "$domain/${compose_name[$container_num]}/$f"
 			echo "$domain/${compose_name[$container_num]}/$f"
