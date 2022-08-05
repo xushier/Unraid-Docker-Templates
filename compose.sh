@@ -22,7 +22,7 @@ hr="\n--------------------------------------------------------------------------
 while :
 do
 	echo -e "开始\n$hr"
-	echo -e "\n传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2\n"
+	echo -e "\n传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2"
 	echo -e "$hr"
 	for key in $(seq ${#container_edition[@]})
 	do
@@ -31,7 +31,7 @@ do
 	echo -e "$hr"
 
 
-	read -p "$str请选择模板序号（1到${#container_edition[@]}，回车直接退出）：" container_num
+	read -p "请选择模板序号（1到${#container_edition[@]}，回车直接退出）：" container_num
 
 	if test $container_num = $str;then
 		echo -e "\n手动退出......"
