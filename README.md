@@ -6,16 +6,16 @@
 # 使用方法
 在 unraid 命令行 Ctrl+Shift+V 粘贴以下内容：
 ```
-wget -qN https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
+curl -#O https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
 
 如果没有梯子的话使用加速地址：
 ```
-wget -qN https://ghproxy.com/https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
+curl -#O https://ghproxy.com/https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
 或者镜像地址：
 ```
-wget -qN https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
+curl -#O https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
 根据提示选择对应的模板，完成之后在 Unraid Docker 界面添加容器，找到并选择模板，根据实际需要修改部分参数即可。
 

@@ -17,12 +17,13 @@ compose_name=(\
 
 file=("name" "description" "autostart" "docker-compose.yml" "docker-compose.override.yml" ".env")
 str=$'\n'
-hr="\n--------------------------------------------------------------------------------\n"
+hr="\n------------------------------------------\n"
+
+echo -e "\n开始执行$hr"
+echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2"
 
 while :
 do
-	echo -e "开始$hr"
-	echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2"
 	echo -e "$hr"
 	for key in $(seq ${#container_edition[@]})
 	do
@@ -30,28 +31,35 @@ do
 	done
 	echo -e "$hr"
 
-
 	read -p "请选择模板序号（1到${#container_edition[@]}，回车直接退出）：" container_num
 
-	if test $container_num = $str;then
+	if test x$container_num = x$str;then
 		echo -e "\n手动退出......"
 		break
 	fi
 
+	if [[ "$container_num" =~ [0-9]+ ]];then
+		if [ $container_num -gt ${#container_edition[@]} ] > /dev/null 2>&1;then
+			echo -e "\n请输入正确的模板序号！"
+			continue
+		fi
+	else
+		echo -e "\n输入错误，请重新选择！"
+		continue
+	fi
 
-	read -p "$str你选择的是：${container_edition[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
+	read -p "$str你选择的是：\n${container_edition[$container_num]}\n确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 
 	if [[ "$conf" =~ [Yy]+[Ee]?[Ss]? ]];then
 		echo -e "$hr"
         mkdir -p $compose_dir/${compose_name[$container_num]} && cd $_
         for f in ${file[@]}
         do
-            curl -sO "$domain/${compose_name[$container_num]}/$f"
-			echo -e "${compose_name[$container_num]}--$f 下载完成"
+            curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
         done
 		echo -e "$hr"
 		echo -e "下载完毕，进入 compsoe.manager 插件界面启动即可。"
-		echo -e "\n结束\n$hr"
+		echo -e "\n执行结束$hr"
 		continue
 	fi
 
@@ -60,7 +68,7 @@ do
 		continue
 	fi
 
-	if test $container_num = $str;then
+	if test x$conf = x$str;then
 		echo -e "\n手动退出......"
 		break
 	fi
