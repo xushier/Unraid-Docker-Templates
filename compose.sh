@@ -7,6 +7,12 @@ raw_mirror="https://ghproxy.com/$raw_domain"
 if [ "$1" = "1" ];then domain=$raw_mirror/templates_compose;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain/templates_compose;fi
 if [ "$1" = "2" ];then curl $raw_mirror/compose.sh > compose.sh;fi
 
+if [[ ! -f "/boot/config/plugins/compose.manager.plg" ]] && [[ ! -d "/usr/local/emhttp/plugins/compose.manager" ]];then 
+	echo -e "compose.manager 插件未安装！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！" && exit
+else
+	echo -e "compose.manager 插件已安装！"
+fi
+
 container_edition=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
 )
@@ -21,7 +27,6 @@ hr="\n------------------------------------------\n"
 
 echo -e "\n开始执行$hr"
 echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2\n"
-echo -e "注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！"
 
 while :
 do
