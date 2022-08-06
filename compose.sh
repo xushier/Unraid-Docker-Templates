@@ -63,7 +63,7 @@ do
         do
 			curl -s --head "$domain/${compose_name[$container_num]}/$f" | head -n 1 | grep "404"
 			if test $? = 0;then
-				touch "$compose_dir/${compose_name[$container_num]}/$f"
+				touch "$compose_dir/${compose_name[$container_num]}/$f" && echo -e "$f 创建完成"
 			else
             	curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
 			fi
