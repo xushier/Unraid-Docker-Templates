@@ -65,7 +65,7 @@ do
 			if test $? = 0;then
 				touch "$compose_dir/${compose_name[$container_num]}/$f" && echo -e "$f 创建完成"
 			else
-            	curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
+            	curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" > $f && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
 			fi
         done
 		echo -e "$hr"
