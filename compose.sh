@@ -20,7 +20,8 @@ str=$'\n'
 hr="\n------------------------------------------\n"
 
 echo -e "\n开始执行$hr"
-echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2"
+echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2\n"
+echo -e "注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！"
 
 while :
 do
