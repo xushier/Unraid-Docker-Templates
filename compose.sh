@@ -5,7 +5,7 @@ raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/ma
 raw_mirror="https://ghproxy.com/$raw_domain"
 
 if [ "$1" = "1" ];then domain=$raw_mirror/templates_compose;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain/templates_compose;fi
-if [ "$1" = "2" ];then curl $raw_mirror/compose.sh > compose.sh;fi
+if [ "$1" = "2" ];then curl -#O $raw_mirror/compose.sh > compose.sh;fi
 
 container_edition=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
@@ -20,7 +20,7 @@ str=$'\n'
 hr="\n------------------------------------------\n"
 
 echo -e "\n开始执行$hr"
-echo -e "传入参数 1，使用镜像地址。例：sh compose.sh 1\n传入参数 2，更新脚本。例：sh compose.sh 2"
+echo -e "若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
 
 while :
 do
@@ -29,7 +29,7 @@ do
 	else
 		echo -e "compose.manager 插件已安装！"
 	fi
-	
+
 	echo -e "$hr"
 	for key in $(seq ${#container_edition[@]})
 	do
