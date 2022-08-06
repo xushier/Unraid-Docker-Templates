@@ -9,10 +9,20 @@ if [ "$1" = "2" ];then curl -#O $raw_mirror/compose.sh > compose.sh;fi
 
 container_edition=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
+[2]="【文件管理器】Kodcloud_Compose 版" \
+[3]="【看板】Planka_Compose 版" \
+[4]="【稍后阅读】Wallabag_Compose 版" \
+[5]="【看板】Wekan_Compose 版" \
+[6]="【聊天平台】RocketChat_Compose 版" \
 )
 
 compose_name=(\
-[1]="Bitwarden" \
+[1]="Vaultwarden" \
+[2]="Kodcloud" \
+[3]="Planka" \
+[4]="Wallabag" \
+[5]="Wekan" \
+[6]="Rocketchat" \
 )
 
 file=("name" "description" "autostart" "docker-compose.yml" "docker-compose.override.yml" ".env")
