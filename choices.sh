@@ -97,13 +97,14 @@ do
 
 		cd $xdtx_template_dir && \
 		echo -e "$hr开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n" && \
-		curl -#O "$domain/xushier/my-unraid-docker-templates/main/templates/my-${template[$container_num]}.xml" && \
+		curl -#O "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.xml" && \
 		sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && \
 		echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
 
 		if [[ $container_num -eq 1 ]];then
 			mkdir -p /mnt/user/appdata/Qbittorrent_80x86/config && cd $_
-			curl -#s qBittorrent.conf "$domain/xushier/my-unraid-docker-templates/main/templates/${template[$container_num]}.conf"
+			echo -e "开始下载配置文件"
+			curl -#s qBittorrent.conf "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.conf"
 		fi
 
 		echo -e "$hr图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
