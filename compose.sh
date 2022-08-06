@@ -54,7 +54,7 @@ do
 		continue
 	fi
 
-	read -p "$str你选择的是：\n${container_edition[$container_num]}\n确定吗?（是输入 y，否输入 n，回车直接退出）" conf
+	read -pe "$str你选择的是：\n${container_edition[$container_num]}\n确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 
 	if [[ "$conf" =~ [Yy]+[Ee]?[Ss]? ]];then
 		echo -e "$hr"
