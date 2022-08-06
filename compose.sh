@@ -61,7 +61,7 @@ do
         mkdir -p $compose_dir/${compose_name[$container_num]} && cd $_
         for f in ${file[@]}
         do
-			curl -s --head "$domain/${compose_name[$container_num]}/$f" | head -n 1 | egrep -o "[0-9]{3}"
+			curl -s --head "$domain/${compose_name[$container_num]}/$f" | head -n 1 | egrep -o "404"
 			if test $? = 0;then
 				touch "$compose_dir/${compose_name[$container_num]}/$f" && echo -e "$f 创建完成"
 			else
