@@ -104,7 +104,7 @@ do
 		if [[ $container_num -eq 1 ]];then
 			mkdir -p /mnt/user/appdata/Qbittorrent_80x86/config && cd $_
 			echo -e "开始下载配置文件"
-			curl -#s qBittorrent.conf "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.conf"
+			curl -#o qBittorrent.conf "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.conf"
 		fi
 
 		echo -e "$hr图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
