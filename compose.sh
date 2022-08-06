@@ -61,7 +61,12 @@ do
         mkdir -p $compose_dir/${compose_name[$container_num]} && cd $_
         for f in ${file[@]}
         do
-            curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
+			curl -s --head "$domain/${compose_name[$container_num]}/$f" | head -n 1 | grep "404"
+			if test $? = 0;then
+				touch "$compose_dir/${compose_name[$container_num]}/$f"
+			else
+            	curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/${compose_name[$container_num]}/$f" && echo -e "下载 ${compose_name[$container_num]}--$f 完成"
+			fi
         done
 		echo -e "$hr"
 		echo -e "下载完毕，进入 compsoe.manager 插件界面启动即可。"
