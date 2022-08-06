@@ -77,7 +77,7 @@ do
 	fi
 
 	if [[ "$container_num" =~ [0-9]+ ]];then
-		if [ $container_num -gt ${#container_edition[@]} ] > /dev/null 2>&1;then
+		if [ $container_num -gt ${#container[@]} ] > /dev/null 2>&1;then
 			echo -e "\n请输入正确的模板序号！"
 			continue
 		fi
