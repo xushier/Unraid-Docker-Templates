@@ -1,13 +1,12 @@
 #!/bin/bash
 
-declare -A container template icon
-xdtx_icon_dir="/boot/config/HD-Icons"
+declare -A container template
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
 raw_domain="https://raw.githubusercontent.com"
-raw_mirror="https://raw.fastgit.org"
+raw_mirror="https://ghproxy.com/$raw_domain"
 
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
-if [[ $1 == 2 ]];then curl -#O https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
+if [[ $1 == 2 ]];then curl -#O $raw_mirror/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
 
 container=(\
 [1]="【PT 下载器】QB_80x86 荒野无灯版" \
@@ -36,29 +35,14 @@ template=(\
 [9]="Vaultwarden_SQLite" \
 [10]="Filebrowser_80x86" \
 [11]="Filebrowser_OF" \
-[12]="Qinglong_B" \
-)
-
-icon=(\
-[1]="Qbittorrent_A" \
-[2]="Qbittorrent_A" \
-[3]="Qbittorrent_A" \
-[4]="Qbittorrent_A" \
-[5]="Qbittorrent_B" \
-[6]="Transmission_A" \
-[7]="Transmission_B" \
-[8]="AriaNgNative_B" \
-[9]="Bitwarden" \
-[10]="Filebrowser" \
-[11]="Filebrowser" \
-[12]="Qinglong_B" \
+[12]="Qinglong" \
 )
 
 str=$'\n'
 hr="\n------------------------------------------\n"
 
 echo -e "\n开始执行$hr"
-echo -e "传入参数 1，使用镜像地址。例：sh choices.sh 1\n传入参数 2，更新脚本。例：sh choices.sh 2"
+echo -e "若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
 
 while :
 do
@@ -89,16 +73,9 @@ do
 	read -p "$str你选择的是：${container[$container_num]}，确定吗?（是输入 y，否输入 n，回车直接退出）" conf
 
 	if [[ "$conf" =~ [Yy]+[Ee]?[Ss]? ]];then
-		mkdir -p $xdtx_icon_dir && \
-		cd $xdtx_icon_dir && \
-		echo -e "$hr开始下载图标文件\n路径 $xdtx_icon_dir/${icon[$container_num]}.png\n" && \
-		curl -#O "$domain/xushier/HD-Icons/main/border-radius/${icon[$container_num]}.png" && \
-		echo -e "\n图标下载完毕。$hr"
-
 		cd $xdtx_template_dir && \
 		echo -e "$hr开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n" && \
 		curl -#O "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.xml" && \
-		sed -i "s/<Icon>.*<\/Icon>/<Icon>${xdtx_icon_dir//\//\\\/}\/${icon[$container_num]}.png<\/Icon>/g" "$xdtx_template_dir/my-${template[$container_num]}.xml" && \
 		echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
 
 		if [[ $container_num -eq 1 ]];then
@@ -107,7 +84,7 @@ do
 			curl -#o qBittorrent.conf "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.conf"
 		fi
 
-		echo -e "$hr图标库：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
+		echo -e "$hr图标库地址：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
 		break
 	fi
 
@@ -121,6 +98,6 @@ do
 		break
 	fi
 
-	echo -e "\n输入错误，请重新选择！"
+	echo -e "\n瞪大眼睛瞅瞅👀你输的是个啥！"
 	continue
 done
