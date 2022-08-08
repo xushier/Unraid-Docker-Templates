@@ -33,15 +33,14 @@ hr="\n------------------------------------------\n"
 
 echo -e "\n开始执行$hr"
 echo -e "若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
+if [[ ! -f "/boot/config/plugins/compose.manager.plg" ]] && [[ ! -d "/usr/local/emhttp/plugins/compose.manager" ]];then 
+	echo -e "compose.manager 插件未安装！在应用市场搜索 compose 安装重试！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！" && exit
+else
+	echo -e "检测到 compose.manager 插件已安装！"
+fi
 
 while :
 do
-	if [[ ! -f "/boot/config/plugins/compose.manager.plg" ]] && [[ ! -d "/usr/local/emhttp/plugins/compose.manager" ]];then 
-		echo -e "compose.manager 插件未安装！在应用市场搜索 compose 安装重试！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！" && exit
-	else
-		echo -e "compose.manager 插件已安装！"
-	fi
-
 	echo -e "$hr"
 	for key in $(seq ${#container_edition[@]})
 	do
