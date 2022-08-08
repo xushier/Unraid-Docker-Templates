@@ -38,10 +38,10 @@ template=(\
 str=$'\n'
 hr="\n------------------------------------------\n"
 
-echo -e "若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
-echo -e "\n开始执行$hr"
+echo -e "\n若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
+echo -e "开始执行$hr"
 
-if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
+if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
 if [[ $1 == 2 ]];then curl -#O $raw_mirror/choices.sh > choices.sh;fi
 
 while :
