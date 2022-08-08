@@ -8,6 +8,7 @@ if [ "$1" = "1" ];then domain=$raw_mirror/templates_compose;echo -e "\n使用 Gi
 if [ "$1" = "2" ];then curl -#O $raw_mirror/compose.sh > compose.sh;fi
 
 
+
 container_edition=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
 [2]="【文件管理器】Kodcloud_Compose 版" \
