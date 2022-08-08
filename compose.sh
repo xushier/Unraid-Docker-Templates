@@ -94,6 +94,6 @@ do
 		break
 	fi
 
-	echo -e "\n输入错误，请重新选择！"
+	echo -e "\n瞪大眼睛瞅瞅👀你输的是个啥！"
 	continue
 done

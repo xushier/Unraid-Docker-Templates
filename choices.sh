@@ -2,11 +2,11 @@
 
 declare -A container template
 xdtx_template_dir="/boot/config/plugins/dockerMan/templates-user"
-raw_domain="https://raw.githubusercontent.com"
+raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main"
 raw_mirror="https://ghproxy.com/$raw_domain"
 
 if [[ $1 == 1 ]];then domain=$raw_mirror;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain;fi
-if [[ $1 == 2 ]];then curl -#O $raw_mirror/xushier/Unraid-Docker-Templates/main/choices.sh > choices.sh;fi
+if [[ $1 == 2 ]];then curl -#O $raw_mirror/choices.sh > choices.sh;fi
 
 container=(\
 [1]="【PT 下载器】QB_80x86 荒野无灯版" \
@@ -75,13 +75,13 @@ do
 	if [[ "$conf" =~ [Yy]+[Ee]?[Ss]? ]];then
 		cd $xdtx_template_dir && \
 		echo -e "$hr开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n" && \
-		curl -#O "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.xml" && \
+		curl -#O "$domain/templates/my-${template[$container_num]}.xml" && \
 		echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
 
 		if [[ $container_num -eq 1 ]];then
 			mkdir -p /mnt/user/appdata/Qbittorrent_80x86/config && cd $_
 			echo -e "开始下载配置文件"
-			curl -#o qBittorrent.conf "$domain/xushier/Unraid-Docker-Templates/main/templates/my-${template[$container_num]}.conf"
+			curl -#o qBittorrent.conf "$domain/templates/my-${template[$container_num]}.conf"
 		fi
 
 		echo -e "$hr图标库地址：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
