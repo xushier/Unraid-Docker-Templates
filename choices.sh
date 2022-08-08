@@ -89,7 +89,7 @@ do
 	fi
 
 	if [[ "$conf" =~ [Nn]+[Oo]? ]];then
-		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~(\n"
+		echo -e "\n )~!~( 这都能输错，小迪一脸嫌弃 )~!~("
 		continue
 	fi
 
