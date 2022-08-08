@@ -4,11 +4,6 @@ compose_dir="/boot/config/plugins/compose.manager/projects"
 raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main"
 raw_mirror="https://ghproxy.com/$raw_domain"
 
-if [ "$1" = "1" ];then domain=$raw_mirror/templates_compose;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain/templates_compose;fi
-if [ "$1" = "2" ];then curl -#O $raw_mirror/compose.sh > compose.sh;fi
-
-
-
 container_edition=(\
 [1]="【密码管理器】Vaultwarden_Compose 版" \
 [2]="【文件管理器】Kodcloud_Compose 版" \
@@ -31,8 +26,12 @@ file=("name" "description" "autostart" "docker-compose.yml" "docker-compose.over
 str=$'\n'
 hr="\n------------------------------------------\n"
 
-echo -e "\n开始执行$hr"
 echo -e "若下载失败，使用镜像加速地址：sh compose.sh 1\n更新脚本：sh compose.sh 2\n"
+echo -e "\n开始执行$hr"
+
+if [ "$1" = "1" ];then domain=$raw_mirror/templates_compose;echo -e "\n使用 Github 镜像加速地址\n";else domain=$raw_domain/templates_compose;fi
+if [ "$1" = "2" ];then curl -#O $raw_mirror/compose.sh > compose.sh;fi
+
 if [[ ! -f "/boot/config/plugins/compose.manager.plg" ]] && [[ ! -d "/usr/local/emhttp/plugins/compose.manager" ]];then 
 	echo -e "compose.manager 插件未安装！在应用市场搜索 compose 安装重试！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！\n注意：使用该脚本模板，需要安装 compose.manager 插件，方可使用！" && exit
 else
@@ -48,7 +47,7 @@ do
 	done
 	echo -e "$hr"
 
-	read -p "请选择模板序号（1到${#container_edition[@]}，回车直接退出）：" container_num
+	read -p "请选择模板序号（ 1 到 ${#container_edition[@]}，回车直接退出）：" container_num
 
 	if test x$container_num = x$str;then
 		echo -e "\n手动退出......"
