@@ -17,7 +17,7 @@ https://hub.docker.com/r/nevinee/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1916]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/Qbittorrent_A.png</Icon>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Qbittorrent_B.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

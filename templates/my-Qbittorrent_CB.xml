@@ -17,7 +17,7 @@ https://hub.docker.com/r/chisbread/qbittorrent/</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1912]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/Qbittorrent_A.png</Icon>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Qbittorrent_A.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

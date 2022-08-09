@@ -17,7 +17,7 @@ https://hub.docker.com/r/superng6/qbittorrentee/</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1922]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/Qbittorrent_B.png</Icon>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Qbittorrent_B.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

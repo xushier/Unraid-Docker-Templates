@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>KoodoReader</Name>
+  <Repository>xushier/koodo-reader:latest</Repository>
+  <Registry>https://hub.docker.com/r/xushier/koodo-reader/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/xushier/koodo-reader/</Support>
+  <Project/>
+  <Overview>Koodo Reader &#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x9605;&#x8BFB;&#x5668;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8015]</WebUI>
+  <TemplateURL/>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/KoodoReader.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647167436</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Koodo Reader &#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x9605;&#x8BFB;&#x5668;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8015</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="WEBUI" Target="80" Default="8015" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8015</Config>
+</Container>

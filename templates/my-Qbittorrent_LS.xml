@@ -13,7 +13,7 @@
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:1915]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/qbittorrent.xml</TemplateURL>
-  <Icon>/boot/config/HD_Icons/Qbittorrent_A.png</Icon>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Qbittorrent_A.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

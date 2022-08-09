@@ -13,7 +13,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
   <TemplateURL/>
-  <Icon>/boot/config/HD-Icons/FileBrowser.png</Icon>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/FileBrowser.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
