@@ -15,9 +15,13 @@ container=(\
 [7]="【PT 下载器】TR_CB 快检版" \
 [8]="【BT 下载器】Aria2NG_Oldiy 版" \
 [9]="【密码管理器】Vaultwarden_SQLite 版" \
-[10]="【文件管理器】Filebrowser_80x86 荒野无灯版" \
-[11]="【文件管理器】Filebrowser_OF 官方版" \
+[10]="【文件管理器】Filebrowser 荒野无灯版" \
+[11]="【文件管理器】Filebrowser 官方版" \
 [12]="【青龙面板】青龙面板 官方版" \
+[13]="【容器指令转换】Composerize 官方版" \
+[14]="【流程图绘制】Draw.io 官方版" \
+[15]="【电子书阅读器】KoodoReader xushier版" \
+[16]="【文件夹信息记录】Snap2Html 321661版" \
 )
 
 template=(\
@@ -33,6 +37,10 @@ template=(\
 [10]="Filebrowser_80x86" \
 [11]="Filebrowser_OF" \
 [12]="Qinglong" \
+[13]="Composerize_OF" \
+[14]="Draw.io_OF" \
+[15]="KoodoReader_Xushier" \
+[16]="Snap2Html_321661" \
 )
 
 str=$'\n'
@@ -74,9 +82,13 @@ do
 
 	if [[ "$conf" =~ [Yy]+[Ee]?[Ss]? ]];then
 		cd $xdtx_template_dir && \
-		echo -e "$hr开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n" && \
-		curl -#O "$domain/templates/my-${template[$container_num]}.xml" && \
-		echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
+		echo -e "$hr开始下载模板文件\n路径 $xdtx_template_dir/my-${template[$container_num]}.xml\n"
+		curl -s --head "$domain/templates/my-${template[$container_num]}.xml" | head -n 1 | egrep -o "404"
+		if test $? = 0;then
+			echo -e "远端模板文件不存在！请等待更新或联系小迪更新。QQ群：647605169"
+		else
+			curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/templates/my-${template[$container_num]}.xml" && echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
+		fi
 
 		if [[ $container_num -eq 1 ]];then
 			mkdir -p /mnt/user/appdata/Qbittorrent_80x86/config && cd $_
