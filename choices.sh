@@ -27,6 +27,7 @@ container=(\
 [19]="【百度网盘】百度网盘 johngong版" \
 [20]="【小猫咪魔法代理】Clash dreamacro版" \
 [21]="【VSCode代码服务器】CodeServer 官方版" \
+[21]="【IYUU辅种神器】IYUU-Plus 官方版" \
 )
 
 template=(\
@@ -51,6 +52,7 @@ template=(\
 [19]="BaiduNetdisk_Johngong" \
 [20]="Clash_Dreamacro" \
 [21]="CodeServer_OF" \
+[21]="IYUU-Plus_OF" \
 )
 
 str=$'\n'
