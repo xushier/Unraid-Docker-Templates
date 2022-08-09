@@ -6,14 +6,14 @@ raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/ma
 raw_mirror="https://ghproxy.com/$raw_domain"
 
 container=(\
-[1]="【PT 下载器】QB 荒野无灯版" \
-[2]="【PT 下载器】QB_LS 版" \
-[3]="【PT 下载器】QB 多功能版" \
-[4]="【PT 下载器】QB 快检版" \
-[5]="【BT 下载器】QB BT增强版" \
-[6]="【PT 下载器】TR_LS 版" \
-[7]="【PT 下载器】TR 快检版" \
-[8]="【BT 下载器】Aria2NG Oldiy版" \
+[1]="【PT下载器】QB 荒野无灯版" \
+[2]="【PT下载器】QB_LS 版" \
+[3]="【PT下载器】QB 多功能版" \
+[4]="【PT下载器】QB 快检版" \
+[5]="【BT下载器】QB BT增强版" \
+[6]="【PT下载器】TR_LS 版" \
+[7]="【PT下载器】TR 快检版" \
+[8]="【BT下载器】Aria2NG Oldiy版" \
 [9]="【密码管理器】Vaultwarden SQLite版" \
 [10]="【文件管理器】Filebrowser 荒野无灯版" \
 [11]="【文件管理器】Filebrowser 官方版" \
@@ -23,10 +23,10 @@ container=(\
 [15]="【电子书阅读器】KoodoReader xushier版" \
 [16]="【目录及文件结构信息记录】Snap2Html 321661版" \
 [17]="【网盘挂载文件管理器】Alist 官方版" \
-[18]="【阿里云 WEBDAV】阿里云 WEBDAV messense版" \
+[18]="【阿里云WEBDAV】阿里云 WEBDAV messense版" \
 [19]="【百度网盘】百度网盘 johngong版" \
 [20]="【小猫咪魔法代理】Clash dreamacro版" \
-[21]="【VSCode 代码服务器】CodeServer 官方版" \
+[21]="【VSCode代码服务器】CodeServer 官方版" \
 )
 
 template=(\
