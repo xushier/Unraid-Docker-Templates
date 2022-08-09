@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Aria2NG</Name>
+  <Repository>oldiy/aria2-ui-ng:latest</Repository>
+  <Registry>https://hub.docker.com/r/oldiy/aria2-ui-ng/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/oldiy/aria2-ui-ng/</Support>
+  <Project/>
+  <Overview>&#x7FA4;&#x6656;&#x53EF;&#x7528;&#x7684;Aria2+WebUI+AriaNG+FilesWeb&#xFF0C;&#x4E2D;&#x6587;&#x5B89;&#x88C5;&#x8BF4;&#x660E;&#x2014;&#x2014;&#x652F;&#x6301;&#x7FA4;&#x6656;&#xFF0C;&#x5A01;&#x8054;&#x901A;&#x7B49;&#x4E00;&#x5207;X86&#x7CFB;&#x7EDF;docker&#x90E8;&#x7F72;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:3611]</WebUI>
+  <TemplateURL/>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/AriaNgNative_B.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1657154069</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/XiaZai" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/XiaZai</Config>
+  <Config Name="Config" Target="/conf" Default="/mnt/user/appdata/Aria2NG" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Aria2NG</Config>
+  <Config Name="WEBUI_NG" Target="80" Default="3611" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3611</Config>
+  <Config Name="WEB_FILE" Target="8080" Default="3622" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3622</Config>
+  <Config Name="WEBUI_UI" Target="81" Default="3655" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3655</Config>
+  <Config Name="RPC_COM" Target="6800" Default="3666" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3666</Config>
+  <Config Name="SECRET_TOKEN" Target="SECRET" Default="token" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+</Container>
