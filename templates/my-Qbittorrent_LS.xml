@@ -30,20 +30,20 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>56688</HostPort>
-        <ContainerPort>56688</ContainerPort>
+        <HostPort>56687</HostPort>
+        <ContainerPort>56687</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>56688</HostPort>
-        <ContainerPort>56688</ContainerPort>
+        <HostPort>56687</HostPort>
+        <ContainerPort>56687</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/</HostDir>
+      <HostDir>/mnt/user/XiaZai</HostDir>
       <ContainerDir>/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -77,9 +77,9 @@
   </Environment>
   <Labels/>
   <Config Name="WebUI" Target="1915" Default="1915" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">1915</Config>
-  <Config Name="Port: 6881" Target="56688" Default="56688" Mode="tcp" Description="tcp connection port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
-  <Config Name="Port: 6881" Target="56688" Default="56688" Mode="udp" Description="udp connection port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
-  <Config Name="Path: /downloads" Target="/downloads" Default="" Mode="rw" Description="Location of downloads on disk." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="Port: 6881" Target="56687" Default="56687" Mode="tcp" Description="tcp connection port" Type="Port" Display="always" Required="true" Mask="false">56687</Config>
+  <Config Name="Port: 6881" Target="56687" Default="56687" Mode="udp" Description="udp connection port" Type="Port" Display="always" Required="true" Mask="false">56687</Config>
+  <Config Name="Path: /downloads" Target="/downloads" Default="/mnt/user/XiaZai" Mode="rw" Description="Location of downloads on disk." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/XiaZai</Config>
   <Config Name="WEBUI_PORT" Target="WEBUI_PORT" Default="1915" Mode="{3}" Description="for changing the port of the webui, see below for explanation" Type="Variable" Display="always" Required="true" Mask="false">1915</Config>
   <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/Qbittorrent_LS" Mode="rw" Description="Contains all relevant configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_LS</Config>
   <Config Name="PUID" Target="PUID" Default="0" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>

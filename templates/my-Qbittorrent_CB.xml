@@ -29,9 +29,9 @@ https://hub.docker.com/r/chisbread/qbittorrent/</Overview>
   <Config Name="Trans Port" Target="56689" Default="56689" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">56689</Config>
   <Config Name="Trans Port" Target="56689" Default="56689" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">56689</Config>
   <Config Name="WEBUI" Target="1912" Default="1912" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">1912</Config>
-  <Config Name="Data" Target="/downloads" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
-  <Config Name="PORT" Target="WEBUI_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1912</Config>
-  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
-  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Data" Target="/downloads" Default="/mnt/user/XiaZai" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/XiaZai</Config>
+  <Config Name="PORT" Target="WEBUI_PORT" Default="1912" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1912</Config>
+  <Config Name="TZ" Target="TZ" Default="Asia/Shanghai" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="PUID" Target="PUID" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
 </Container>

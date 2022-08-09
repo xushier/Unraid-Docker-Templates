@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Filebrowser</Name>
+  <Name>Filebrowser_80x86</Name>
   <Repository>80x86/filebrowser:2.9.4-amd64</Repository>
   <Registry>https://hub.docker.com/r/80x86/filebrowser/</Registry>
   <Network>host</Network>
@@ -22,11 +22,11 @@
   <DonateLink/>
   <Requires/>
   <Config Name="UMASK_SET" Target="UMASK_SET" Default="000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
-  <Config Name="Files" Target="/myfiles" Default="/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="Files" Target="/myfiles" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/Filebrowser/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Filebrowser/config</Config>
   <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="WEBUI" Target="1611" Default="1611" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">1611</Config>
   <Config Name="UHD630" Target="" Default="/dev/dri/renderD128" Mode="" Description="" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
-  <Config Name="Link" Target="/mnt" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <!-- <Config Name="Link" Target="/mnt" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config> PS: Vertex symbol link need -->
 </Container>
