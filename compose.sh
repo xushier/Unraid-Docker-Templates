@@ -5,12 +5,12 @@ raw_domain="https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/ma
 raw_mirror="https://ghproxy.com/$raw_domain"
 
 container_edition=(\
-[1]="【密码管理器】Vaultwarden_Compose 版" \
-[2]="【文件管理器】Kodcloud_Compose 版" \
-[3]="【看板】Planka_Compose 版" \
-[4]="【稍后阅读】Wallabag_Compose 版" \
-[5]="【看板】Wekan_Compose 版" \
-[6]="【聊天平台】RocketChat_Compose 版" \
+[1]="【密码管理器】Vaultwarde Compose版" \
+[2]="【文件管理器】Kodcloud Compose版" \
+[3]="【看板】Planka Compose版" \
+[4]="【稍后阅读】Wallabag Compose版" \
+[5]="【看板】Wekan Compose版" \
+[6]="【聊天平台】RocketChat Compose版" \
 )
 
 compose_name=(\
