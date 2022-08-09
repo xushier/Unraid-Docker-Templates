@@ -52,7 +52,7 @@ template=(\
 [19]="BaiduNetdisk_Johngong" \
 [20]="Clash_Dreamacro" \
 [21]="CodeServer_OF" \
-[21]="IYUU-Plus_OF" \
+[22]="IYUU-Plus_OF" \
 )
 
 str=$'\n'
