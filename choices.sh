@@ -14,14 +14,14 @@ container=(\
 [6]="【PT 下载器】TR_LS 版" \
 [7]="【PT 下载器】TR_CB 快检版" \
 [8]="【BT 下载器】Aria2NG_Oldiy 版" \
-[9]="【密码管理器】Vaultwarden_SQLite 版" \
+[9]="【密码管理器】Vaultwarden SQLite版" \
 [10]="【文件管理器】Filebrowser 荒野无灯版" \
 [11]="【文件管理器】Filebrowser 官方版" \
 [12]="【青龙面板】青龙面板 官方版" \
 [13]="【容器指令转换】Composerize 官方版" \
 [14]="【流程图绘制】Draw.io 官方版" \
 [15]="【电子书阅读器】KoodoReader xushier版" \
-[16]="【文件夹信息记录】Snap2Html 321661版" \
+[16]="【目录及文件结构信息记录】Snap2Html 321661版" \
 )
 
 template=(\
