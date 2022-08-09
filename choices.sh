@@ -103,7 +103,16 @@ do
 		if [[ $container_num -eq 1 ]];then
 			mkdir -p /mnt/user/appdata/Qbittorrent_80x86/config && cd $_
 			echo -e "开始下载配置文件"
-			curl -#o qBittorrent.conf "$domain/templates/my-${template[$container_num]}.conf"
+			curl -#o --retry 3 --retry-delay 3 --retry-max-time 15 qBittorrent.conf "$domain/templates/my-${template[$container_num]}.conf"
+		fi
+		if [[ $container_num -eq 7 ]];then
+			mkdir -p /mnt/user/appdata/Transmission_CB/transmission-web-control && cd $_
+			echo -e "开始下载主题包"
+			curl -#o --retry 3 --retry-delay 3 --retry-max-time 15 web_control.zip https://ghproxy.com/https://github.com/ronggang/transmission-web-control/archive/refs/tags/v1.6.1-update1.zip
+			unzip -q web_control.zip && cp -r transmission-web-control-1.6.1-update1/src/* ./ && rm -rf transmission-web-control-1.6.1-update1
+			mkdir -p /mnt/user/appdata/Transmission_CB/config && cd $_
+			echo -e "开始下载配置文件"
+			curl -#o --retry 3 --retry-delay 3 --retry-max-time 15 settings.json "$domain/templates/my-${template[$container_num]}.json"
 		fi
 
 		echo -e "$hr图标库地址：https://github.com/xushier/HD-Icons\n公众号：小迪同学\n B 站：煦诗儿$hr"
