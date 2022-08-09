@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Transmission_LS</Name>
+  <Repository>linuxserver/transmission</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/transmission</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-transmission/issues/new/choose</Support>
+  <Project>https://www.transmissionbt.com/</Project>
+  <Overview>Transmission(https://www.transmissionbt.com/) is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, &#xB5;TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:9095]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/transmission.xml</TemplateURL>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Transmission_A.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1656234245</DateInstalled>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <Requires/>
+  <Config Name="WebUI" Target="9091" Default="9096" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">9095</Config>
+  <Config Name="Port: 51413" Target="51413" Default="51415" Mode="tcp" Description="Torrent Port TCP" Type="Port" Display="always" Required="true" Mask="false">51415</Config>
+  <Config Name="Port: 51413" Target="51413" Default="51415" Mode="udp" Description="Torrent Port UDP" Type="Port" Display="always" Required="true" Mask="false">51415</Config>
+  <Config Name="Path: /downloads" Target="/downloads" Default="/mnt/user/XiaZai" Mode="rw" Description="Local path for downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/XiaZai</Config>
+  <Config Name="Path: /watch" Target="/watch" Default="/mnt/user/appdata/Transmission_LS/watch" Mode="rw" Description="Watch folder for torrent files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Transmission_LS/watch</Config>
+  <Config Name="TRANSMISSION_WEB_HOME" Target="TRANSMISSION_WEB_HOME" Default="/transmission-web-control/" Mode="{3}" Description="Specify an alternative UI options are `/combustion-release/`(https://github.com/Secretmapper/combustion), `/transmission-web-control/`(https://github.com/ronggang/transmission-web-control), `/kettu/`(https://github.com/endor/kettu), `/flood-for-transmission/`(https://github.com/johman10/flood-for-transmission), and `/transmissionic/`(https://github.com/6c65726f79/Transmissionic)." Type="Variable" Display="always" Required="false" Mask="false">/transmission-web-control/</Config>
+  <Config Name="USER" Target="USER" Default="username" Mode="{3}" Description="Specify an optional username for the interface" Type="Variable" Display="always" Required="false" Mask="false">username</Config>
+  <Config Name="PASS" Target="PASS" Default="password" Mode="{3}" Description="Specify an optional password for the interface" Type="Variable" Display="always" Required="false" Mask="true">password</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/Transmission_LS" Mode="rw" Description="Where transmission should store config files and logs." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Transmission_LS</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
