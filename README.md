@@ -42,11 +42,15 @@ curl -#O https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/compose.sh
 ```
 下载完后脚本会自动运行。
 
-**多容器模板需要配合使用 `compose.manager` 插件来安装，脚本运行时会先检测插件是否安装。若安装，根据提示选择对应的模板，会继续进行后续的模板下载，完成之后在 Unraid `compose.manager` 界面对应的容器就已经出现，点击 `COMPOSE UP` 按钮，等待自动拉取镜像、安装启动即可。**
+- **多容器模板需要配合使用 `compose.manager` 插件来安装，脚本运行时会先检测插件是否安装。**
 
-**若需修改端口或目录，点击容器名称，点击 `EDIT STACK` > `COMPOSE FILE` 进入编辑；**
+- **若安装，根据提示选择对应的模板，会继续进行后续的模板下载，完成之后在 Unraid `compose.manager` 界面对应的容器就已经出现，点击 `COMPOSE UP` 按钮，等待自动拉取镜像、安装启动即可。**
 
-**若需修改 `WEBUI` 或图标地址，点击容器名称，点击 `EDIT STACK` > `UI LABELS` 进入编辑；**
+- **若未安装，则会自动退出脚本。安装方法：在 Unraid 应用商店搜索 `compose.manager` 安装。**
+
+- **若需修改端口或目录，点击容器名称，点击 `EDIT STACK` > `COMPOSE FILE` 进入编辑；**
+
+- **若需修改 `WEBUI` 或图标地址，点击容器名称，点击 `EDIT STACK` > `UI LABELS` 进入编辑；**
 
 后续下载模板时，在终端命令行同目录执行 `sh compose.sh` 即可。
 
