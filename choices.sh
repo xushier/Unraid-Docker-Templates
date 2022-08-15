@@ -98,6 +98,7 @@ do
 		curl -s --head "$domain/templates/my-${template[$container_num]}.xml" | head -n 1 | egrep -o "404"
 		if test $? = 0;then
 			echo -e "远端模板文件不存在！请等待更新或联系小迪更新。QQ群：647605169"
+			continue
 		else
 			curl -#O --retry 3 --retry-delay 3 --retry-max-time 15 "$domain/templates/my-${template[$container_num]}.xml" && echo -e "\n模板文件下载完毕。在容器界面点击添加容器，选择该模板即可。$hr"
 		fi
