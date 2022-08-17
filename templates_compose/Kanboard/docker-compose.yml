@@ -34,11 +34,11 @@ services:
       MYSQL_PASSWORD: xiaodi666
     volumes:
       - /mnt/user/appdata/MariaDB_Kanboard:/var/lib/mysql
-# networks:
-#   kanboard:
-#     driver: bridge
-
 networks:
   kanboard:
-    external:
-      name: unet
+    driver: bridge
+
+# networks:
+#   kanboard:
+#     external:
+#       name: unet
