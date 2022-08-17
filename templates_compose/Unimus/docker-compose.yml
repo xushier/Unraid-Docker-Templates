@@ -1,1 +1,35 @@
 
+version: "3"
+
+services:
+  Unimus_DB_Test:
+    image: mariadb
+    command: --max_allowed_packet=268M
+    environment:
+      - MYSQL_ROOT_PASSWORD=xushier666
+      - MYSQL_DATABASE=unimus
+      - MYSQL_USER=xushier
+      - MYSQL_PASSWORD=xushier666
+      - TZ=Asia/Shanghai
+    volumes:
+      - '/mnt/user/appdata/Unimus_DB_Test:/var/lib/mysql'
+      - '/etc/localtime:/etc/localtime:ro'
+    restart: unless-stopped
+  Unimus_Test:
+    image: croc/unimus
+    environment:
+      # base memory params for java
+      #- XMX=1024M
+      #- XMS=256M
+      # OR more customizable JAVA options
+      - JAVA_OPTS=-Xms256M -Xmx1024M -Dunimus.core.connect-timeout=20000 -Dunimus.core.inter-connection-delay=1000 -Dunimus.core.cli-expect-timeout=30000
+      - TZ=Asia/Shanghai
+    volumes:
+      - '/mnt/user/appdata/Unimus_Test:/etc/unimus'
+      - '/etc/localtime:/etc/localtime:ro'
+    depends_on:
+      - Unimus_DB_Test
+    ports:
+      - '8026:8085'
+      - '8027:5509' # for unimus-core connection if the unimus version is higher than 2.0.0
+    restart: unless-stopped
