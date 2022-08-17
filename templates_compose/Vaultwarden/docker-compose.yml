@@ -1,7 +1,7 @@
-version: "3.7"
+version: "3.8"
 services:
  mariadb:
-  image: "mariadb"
+  image: mariadb
   container_name: "MariaDB_Vaultwarden"
   hostname: "mariadb_vaultwarden"
   restart: always
@@ -17,10 +17,13 @@ services:
    - "MYSQL_PASSWORD=${PASSWORD}"     # 此处填本数据库的密码，使用该密码只能访问本数据库。
 
  vaultwarden:
-  image: "vaultwarden/server:latest"
+  image: vaultwarden/server:latest
   container_name: "Vaultwarden_MariaDB"
   hostname: "vaultwarden_mariadb"
   restart: always
+  depends_on:
+   mariadb:
+    condition: service_healthy
   env_file:
    - ".env"
   volumes:
