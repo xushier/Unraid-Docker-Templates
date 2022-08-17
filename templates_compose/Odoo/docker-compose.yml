@@ -2,6 +2,7 @@ version: "3.1"
 services:
   web:
     image: "odoo:14.0"
+    container_name: odoo_test
     depends_on:
       - db
     ports:
@@ -11,11 +12,11 @@ services:
       - "/mnt/user/appdata/Odoo_Test/config:/etc/odoo"
       - "/mnt/user/appdata/Odoo_Test/addons:/mnt/extra-addons"
     environment:
-      - "HOST=odoo"
       - "USER=xushier"
       - "PASSWORD=xushier666"
   db:
     image: "postgres:13"
+    container_name: postgresql_odoo
     environment:
       - "POSTGRES_DB=odoo"
       - "POSTGRES_PASSWORD=xushier666"
