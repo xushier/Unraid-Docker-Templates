@@ -11,6 +11,8 @@ container_edition=(\
 [4]="【稍后阅读】Wallabag Compose版" \
 [5]="【看板】Wekan Compose版" \
 [6]="【聊天平台】RocketChat Compose版" \
+[7]="测试" \
+[8]="测试" \
 )
 
 compose_name=(\
@@ -20,6 +22,8 @@ compose_name=(\
 [4]="Wallabag" \
 [5]="Wekan" \
 [6]="Rocketchat" \
+[7]="Odoo" \
+[8]="Unimus" \
 )
 
 file=("name" "description" "autostart" "docker-compose.yml" "docker-compose.override.yml" ".env")
