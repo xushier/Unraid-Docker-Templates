@@ -13,6 +13,7 @@ container_edition=(\
 [6]="【聊天平台】RocketChat Compose版" \
 [7]="测试" \
 [8]="测试" \
+[9]="测试" \
 )
 
 compose_name=(\
@@ -24,6 +25,7 @@ compose_name=(\
 [6]="Rocketchat" \
 [7]="Odoo" \
 [8]="Unimus" \
+[9]="Kanboard" \
 )
 
 file=("name" "description" "autostart" "docker-compose.yml" "docker-compose.override.yml" ".env")
