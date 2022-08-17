@@ -1,1 +1,11 @@
-
+services:
+  db:
+    labels:
+      net.unraid.docker.managed: 'composeman'
+      net.unraid.docker.icon: ''
+      net.unraid.docker.webui: ''
+  unimus:
+    labels:
+      net.unraid.docker.managed: 'composeman'
+      net.unraid.docker.icon: ''
+      net.unraid.docker.webui: ''

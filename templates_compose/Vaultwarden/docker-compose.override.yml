@@ -1,11 +1,11 @@
 services:
-  wekandb:
+  db:
     labels:
       net.unraid.docker.managed: 'composeman'
-      net.unraid.docker.icon: '/boot/config/HD-Icons/border-radius/Wekan.png'
-      net.unraid.docker.webui: 'http://12.12.12.222'
-  wekan:
+      net.unraid.docker.icon: ''
+      net.unraid.docker.webui: ''
+  unimus:
     labels:
       net.unraid.docker.managed: 'composeman'
-      net.unraid.docker.icon: '/boot/config/HD-Icons/border-radius/Wekan.png'
-      net.unraid.docker.webui: 'http://12.12.12.222'
+      net.unraid.docker.icon: ''
+      net.unraid.docker.webui: ''
