@@ -1,0 +1,26 @@
+
+version: '3.1'
+services:
+  Odoo_Test:
+    image: odoo:14.0
+    depends_on:
+      - Odoo_DB_Test
+    ports:
+      - "8025:8069"
+    volumes:
+      - /mnt/user/appdata/Odoo_Test:/var/lib/odoo
+      - /mnt/user/appdata/Odoo_Test/config:/etc/odoo
+      - /mnt/user/appdata/Odoo_Test/addons:/mnt/extra-addons
+    environment:
+      - HOST=odoo
+      - USER=xushier
+      - PASSWORD=xushier666
+  Odoo_DB_Test:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=odoo
+      - POSTGRES_PASSWORD=xushier666
+      - POSTGRES_USER=xushier
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - /mnt/user/appdata/Odoo_DB_Test:/var/lib/postgresql/data/pgdata
