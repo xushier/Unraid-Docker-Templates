@@ -1,6 +1,6 @@
 version: "3"
 services:
-  Unimus_DB_Test:
+  db:
     image: mariadb
     command: --max_allowed_packet=268M
     environment:
@@ -13,7 +13,7 @@ services:
       - '/mnt/user/appdata/Unimus_DB_Test:/var/lib/mysql'
       - '/etc/localtime:/etc/localtime:ro'
     restart: unless-stopped
-  Unimus_Test:
+  unimus:
     image: croc/unimus
     environment:
       # base memory params for java
@@ -26,7 +26,7 @@ services:
       - '/mnt/user/appdata/Unimus_Test:/etc/unimus'
       - '/etc/localtime:/etc/localtime:ro'
     depends_on:
-      - Unimus_DB_Test
+      - db
     ports:
       - '8026:8085'
       - '8027:5509' # for unimus-core connection if the unimus version is higher than 2.0.0
