@@ -1,44 +1,39 @@
 version: '3.8'
+
 services:
   kanboard:
     image: kanboard/kanboard:latest
-    container_name: Kanboard
-    hostname: kanboard
+    container_name: Kanboard_MariaDB
     restart: always
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     networks:
       - kanboard
     ports:
-      - "6300:80"
-      - "6301:443"
+      - 6300:80
+      - 6301:443
     volumes:
       - /mnt/user/appdata/Kanboard/data:/var/www/app/data
       - /mnt/user/appdata/Kanboard/plugins:/var/www/app/plugins
       - /mnt/user/appdata/Kanboard/ssl:/etc/nginx/ssl
     environment:
-      DATABASE_URL: mysql://xiaodi:xiaodi666@mariadb_kanboard/kanboard
+      DATABASE_URL: mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@db/${MYSQL_DATABASE}
+
   db:
     image: mariadb:latest
     container_name: MariaDB_Kanboard
-    hostname: mariadb_kanboard
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     networks:
       - kanboard
     environment:
-      MYSQL_ROOT_PASSWORD: rootxiaodi666
-      MYSQL_DATABASE: kanboard
-      MYSQL_USER: xiaodi
-      MYSQL_PASSWORD: xiaodi666
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - /mnt/user/appdata/MariaDB_Kanboard:/var/lib/mysql
+
 networks:
   kanboard:
     driver: bridge
-
-# networks:
-#   kanboard:
-#     external:
-#       name: unet

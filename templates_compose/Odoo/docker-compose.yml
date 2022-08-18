@@ -1,26 +1,36 @@
-version: "3.1"
+version: '3.8'
+
 services:
   web:
-    image: "odoo:14.0"
-    container_name: odoo_test
+    image: odoo:14.0
+    container_name: Odoo_Postgres
     depends_on:
       - db
+    networks:
+      - odoo
     ports:
-      - "8025:8069"
+      - 8025:8069
     volumes:
-      - "/mnt/user/appdata/Odoo_Test:/var/lib/odoo"
-      - "/mnt/user/appdata/Odoo_Test/config:/etc/odoo"
-      - "/mnt/user/appdata/Odoo_Test/addons:/mnt/extra-addons"
+      - /mnt/user/appdata/Odoo_Test:/var/lib/odoo
+      - /mnt/user/appdata/Odoo_Test/config:/etc/odoo
+      - /mnt/user/appdata/Odoo_Test/addons:/mnt/extra-addons
     environment:
-      - "USER=xushier"
-      - "PASSWORD=xushier666"
+      - USER=${USER}
+      - PASSWORD=${PASSWORD}
+
   db:
-    image: "postgres:13"
-    container_name: postgresql_odoo
+    image: postgres:13
+    container_name: Postgres_Odoo
+    networks:
+      - odoo
     environment:
-      - "POSTGRES_DB=odoo"
-      - "POSTGRES_PASSWORD=xushier666"
-      - "POSTGRES_USER=xushier"
-      - "PGDATA=/var/lib/postgresql/data/pgdata"
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - "/mnt/user/appdata/Odoo_DB_Test:/var/lib/postgresql/data/pgdata"
+      - /mnt/user/appdata/Odoo_DB_Test:/var/lib/postgresql/data/pgdata
+
+networks:
+  odoo:
+    driver: bridge

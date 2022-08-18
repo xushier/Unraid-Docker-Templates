@@ -1,8 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
   planka:
-    image: ghcr.io/plankanban/planka:latest
+    image: meltyshev/planka:latest
+    container_name: Planka_Postgres
     command: >
       bash -c
         "for i in `seq 1 30`; do
@@ -12,10 +13,12 @@ services:
           sleep 5;
         done; (exit $$s)"
     restart: unless-stopped
+    networks:
+      - planka
     volumes:
-      - user-avatars:/app/public/user-avatars
-      - project-background-images:/app/public/project-background-images
-      - attachments:/app/private/attachments
+      - /mnt/user/appdata/Planka_Postgres/user-avatars:/app/public/user-avatars
+      - /mnt/user/appdata/Planka_Postgres/project-background-images:/app/public/project-background-images
+      - /mnt/user/appdata/Planka_Postgres/attachments:/app/private/attachments
     ports:
       - 3000:1337
     environment:
@@ -29,14 +32,14 @@ services:
   postgres:
     image: postgres:alpine
     restart: unless-stopped
+    networks:
+      - planka
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - /mnt/user/appdata/Postgres_Planka/db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=planka
       - POSTGRES_HOST_AUTH_METHOD=trust
 
-volumes:
-  user-avatars:
-  project-background-images:
-  attachments:
-  db-data:
+networks:
+  planka:
+    driver: bridge

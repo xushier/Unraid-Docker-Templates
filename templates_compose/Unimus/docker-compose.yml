@@ -1,33 +1,41 @@
-version: "3"
+version: '3.8'
+
 services:
   db:
     image: mariadb
+    container_name: MariaDB_Unimus
     command: --max_allowed_packet=268M
+    networks:
+      - unimus
     environment:
-      - MYSQL_ROOT_PASSWORD=xushier666
-      - MYSQL_DATABASE=unimus
-      - MYSQL_USER=xushier
-      - MYSQL_PASSWORD=xushier666
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - TZ=Asia/Shanghai
     volumes:
-      - '/mnt/user/appdata/Unimus_DB_Test:/var/lib/mysql'
-      - '/etc/localtime:/etc/localtime:ro'
+      - /mnt/user/appdata/MariaDB_Unimus:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
+
   unimus:
     image: croc/unimus
+    container_name: Unimus_MariaDB
+    networks:
+      - unimus
     environment:
-      # base memory params for java
-      #- XMX=1024M
-      #- XMS=256M
-      # OR more customizable JAVA options
       - JAVA_OPTS=-Xms256M -Xmx1024M -Dunimus.core.connect-timeout=20000 -Dunimus.core.inter-connection-delay=1000 -Dunimus.core.cli-expect-timeout=30000
       - TZ=Asia/Shanghai
     volumes:
-      - '/mnt/user/appdata/Unimus_Test:/etc/unimus'
-      - '/etc/localtime:/etc/localtime:ro'
+      - /mnt/user/appdata/Unimus_MariaDB:/etc/unimus
+      - /etc/localtime:/etc/localtime:ro
     depends_on:
       - db
     ports:
-      - '8026:8085'
-      - '8027:5509' # for unimus-core connection if the unimus version is higher than 2.0.0
+      - 8026:8085
+      - 8027:5509 # for unimus-core connection if the unimus version is higher than 2.0.0
     restart: unless-stopped
+
+networks:
+  unimus:
+    driver: bridge

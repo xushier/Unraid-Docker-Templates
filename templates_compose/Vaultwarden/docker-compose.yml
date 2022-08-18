@@ -1,37 +1,51 @@
-version: "3.8"
-services:
- mariadb:
-  image: mariadb
-  container_name: "MariaDB_Vaultwarden"
-  hostname: "mariadb_vaultwarden"
-  restart: always
-  env_file:
-   - ".env"
-  volumes:
-   - "/mnt/user/appdata/MariaDB_Vaultwarden:/var/lib/mysql"
-   - "/etc/localtime:/etc/localtime:ro"
-  environment:
-   - "MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}"     # 此处填数据库根密码，该密码拥有最高权限，可以访问创建的任何数据库。
-   - "MYSQL_DATABASE=${DATABASE}"     # 此处填本数据库的名字。
-   - "MYSQL_USER=${USER}"     # 此处填本数据库的用户名。使用该用户只能访问本数据库。
-   - "MYSQL_PASSWORD=${PASSWORD}"     # 此处填本数据库的密码，使用该密码只能访问本数据库。
+version: '3.8'
 
- vaultwarden:
-  image: vaultwarden/server:latest
-  container_name: "Vaultwarden_MariaDB"
-  hostname: "vaultwarden_mariadb"
-  restart: always
-  depends_on:
-   mariadb:
-    condition: service_healthy
-  env_file:
-   - ".env"
-  volumes:
-   - "/mnt/user/appdata/Vaultwarden_MariaDB:/data/"
-  environment:
-## Had issues when using single parentheses around the mysql URL as in the plain docker example 
-   - "DATABASE_URL=mysql://${USER}:${PASSWORD}@mariadb_vaultwarden/${DATABASE}"
-   - "ADMIN_TOKEN=${ADMIN_TOKEN}"
-   - "RUST_BACKTRACE=1"
-  ports:
-   - "8282:80"
+services:
+  mariadb:
+    image: mariadb
+    container_name: MariaDB_Vaultwarden
+    hostname: mariadb
+    restart: always
+    networks:
+      - vaultwarden
+    env_file:
+      - .env
+    volumes:
+      - /mnt/user/appdata/MariaDB_Vaultwarden:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}     # 此处填数据库根密码，该密码拥有最高权限，可以访问创建的任何数据库。
+      - MYSQL_DATABASE=${DATABASE}     # 此处填本数据库的名字。
+      - MYSQL_USER=${USER}     # 此处填本数据库的用户名。使用该用户只能访问本数据库。
+      - MYSQL_PASSWORD=${PASSWORD}     # 此处填本数据库的密码，使用该密码只能访问本数据库。
+    # healthcheck:
+    #   test: ["CMD-SHELL", "curl -sS 'http://localhost:3306' || exit 1"]
+    #   interval: 3s
+    #   timeout: 5s
+    #   retries: 6
+
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: Vaultwarden_MariaDB
+    hostname: vaultwarden
+    restart: always
+    depends_on:
+      - mariadb
+      # mariadb:
+      #   condition: service_healthy
+    networks:
+      - vaultwarden
+    env_file:
+      - .env
+    volumes:
+      - /mnt/user/appdata/Vaultwarden_MariaDB:/data/
+    environment:
+      - DATABASE_URL=mysql://${USER}:${PASSWORD}@mariadb/${DATABASE}
+      - ADMIN_TOKEN=${ADMIN_TOKEN}
+      - RUST_BACKTRACE=1
+    ports:
+      - 8282:80
+
+networks:
+  vaultwarden:
+    driver: bridge

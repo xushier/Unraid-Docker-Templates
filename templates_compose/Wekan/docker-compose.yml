@@ -1,23 +1,22 @@
 version: '2'
 
-# Note: Do not add single quotes '' to variables. Having spaces still works without quotes where required.
 #---------------------------------------------------------------------------------------------------------
-# ==== CREATING USERS AND LOGGING IN TO WEKAN ====
+# ==== 创建用户并登录 ====
 # https://github.com/wekan/wekan/wiki/Adding-users
 #---------------------------------------------------------------------------------------------------------
-# ==== FORGOT PASSWORD ====
+# ==== 忘记密码 ====
 # https://github.com/wekan/wekan/wiki/Forgot-Password
 #---------------------------------------------------------------------------------------------------------
-# ==== Upgrading Wekan to new version =====
+# ==== 更新版本 =====
 # NOTE: MongoDB has changed from 3.x to 4.x, in that case you need backup/restore with --noIndexRestore
 #       see https://github.com/wekan/wekan/wiki/Backup
-# 1) Stop Wekan:
+# 1) 停止 Wekan:
 #      docker-compose stop
-# 2) Remove old Wekan app (wekan-app only, not that wekan-db container that has all your data)
+# 2) 删除 Wekan (只删除 wekan 容器，不删除数据库容器)
 #      docker rm wekan-app
-# 3) Get newest docker-compose.yml from https://github.com/wekan/wekan to have correct image,
+# 3) 获取最新 docker-compose.yml 文件，从 https://github.com/wekan/wekan to have correct image,
 #    for example: "image: quay.io/wekan/wekan" or version tag "image: quay.io/wekan/wekan:v4.52"
-# 4) Start Wekan:
+# 4) 启动 Wekan:
 #      docker-compose up -d
 #----------------------------------------------------------------------------------
 # ==== OPTIONAL: DEDICATED DOCKER USER ====
@@ -87,7 +86,6 @@ version: '2'
 #-------------------------------------------------------------------------
 
 services:
-
   wekandb:
     #-------------------------------------------------------------------------------------
     # ==== MONGODB AND METEOR VERSION ====
@@ -100,21 +98,21 @@ services:
     # Docker Hub MongoDB image does work:
     image: mongo:5
     #-------------------------------------------------------------------------------------
-    container_name: wekan-db
+    container_name: MongoDB_Wekan
     restart: always
     # command: mongod --oplogSize 128
     # Syslog: mongod --syslog --oplogSize 128 --quiet
     # Disable MongoDB logs:
     command: mongod --logpath /dev/null --oplogSize 128 --quiet
     networks:
-      - wekan-tier
+      - wekan
     expose:
       - 27017
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - wekan-db:/data/db
-      - wekan-db-dump:/dump
+      - /mnt/user/appdata/MongoDB_Wekan/db:/data/db
+      - /mnt/user/appdata/MongoDB_Wekan/dump:/dump
 
   wekan:
     #-------------------------------------------------------------------------------------
@@ -126,7 +124,7 @@ services:
     # c) Docker Hub builds do work https://hub.docker.com/r/wekanteam/wekan
     # image: wekanteam/wekan
     #-------------------------------------------------------------------------------------
-    container_name: wekan-app
+    container_name: Wekan_MongoDB
     # On CentOS 7 there is seccomp issue with glibc 6, so setting it to unconfined
     # to get WeKan working. See:
     #   - https://github.com/wekan/wekan/issues/4585
@@ -135,7 +133,7 @@ services:
       - seccomp:unconfined
     restart: always
     networks:
-      - wekan-tier
+      - wekan
     #-------------------------------------------------------------------------------------
     # ==== BUILD wekan-app DOCKER CONTAINER FROM SOURCE, if you uncomment these ====
     # ==== and use commands: docker-compose up -d --build
@@ -690,7 +688,7 @@ services:
       - wekandb
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - wekan-files:/data:rw
+      - /mnt/user/appdata/Wekan_MongoDB:/data:rw
 
 #---------------------------------------------------------------------------------
 # ==== OPTIONAL: SHARE DATABASE TO OFFICE LAN AND REMOTE VPN ====
@@ -741,14 +739,6 @@ services:
 ##     - ./nginx/ssl/testvm-ehu.key:/etc/nginx/conf.d/ssl/certs/mykey.key:ro
 ##     - ./nginx/ssl/pphrase:/etc/nginx/conf.d/ssl/pphrase:ro
 
-volumes:
-  wekan-files:
-    driver: local
-  wekan-db:
-    driver: local
-  wekan-db-dump:
-    driver: local
-
 networks:
-  wekan-tier:
+  wekan:
     driver: bridge
