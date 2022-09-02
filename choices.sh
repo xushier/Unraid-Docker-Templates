@@ -34,6 +34,20 @@ container=(\
 [26]="【影音服务 Emby】【LS 版】" \
 [27]="【影音服务 Jellyfin】【LS 版】" \
 [28]="【影音服务 Dim】【官方版】" \
+[29]="【协作白板 WhiteBophir】【官方版】" \
+[30]="【谷歌浏览器 Chrome】【官方版】" \
+[31]="【数据库 MariaDB】【LS 版】" \
+[32]="【缓存数据库 Redis】【LS 版】" \
+[33]="【缓存数据库 Memcached】【LS 版】" \
+[34]="【可道云 Kodbox】【Sqlite 版】" \
+[35]="【网易云音乐 YesplayMusic】【官方版】" \
+[36]="【图床 Lskypro】【版】" \
+[37]="【网页服务器 Nginx】【LS 版】" \
+[38]="【远程文件服务 WEBDAV】【版】" \
+[39]="【对象存储服务 Minio】【官方版】" \
+[40]="【Jellyfin 前端界面 Jellyfin-Vue】【官方版】" \
+[41]="【电驴下载器 Amule】【版】" \
+[42]="【远程控制服务 RustDesk】【官方版】" \
 )
 
 template=(\
@@ -65,6 +79,20 @@ template=(\
 [26]="Emby_LS" \
 [27]="Jellyfin_LS" \
 [28]="Dim_OF" \
+[29]="Wbo" \
+[30]="Chrome" \
+[31]="MariaDB_LS" \
+[32]="Redis" \
+[33]="Memcached" \
+[34]="Kodbox" \
+[35]="YesplayMusic" \
+[36]="Lskypro" \
+[37]="Nginx" \
+[38]="WEBDAV" \
+[39]="Minio" \
+[40]="Jellyfin-Vue" \
+[41]="Amule" \
+[42]="RustDesk" \
 )
 
 str=$'\n'
