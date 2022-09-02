@@ -82,7 +82,7 @@ do
 	for key in $(seq ${#container[@]})
 	do
 	    # echo "$key : ${container[$key]}"
-		printf "序号：%5s 容器：%-50s\n" $key ${container[$key]}
+		printf "序号：%-10s 容器：%-50s\n" $key ${container[$key]}
 	done
 	echo -e "$hr"
     
