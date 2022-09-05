@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>UnblockMusic</Name>
+  <Repository>nondanee/unblockneteasemusic</Repository>
+  <Registry>https://hub.docker.com/r/nondanee/unblockneteasemusic/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/nondanee/unblockneteasemusic/</Support>
+  <Project/>
+  <Overview>Revive unavailable songs for Netease Cloud Music   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8007]</WebUI>
+  <TemplateURL/>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/163Music.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1629942788</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Revive unavailable songs for Netease Cloud Music   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8007</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="WEBUI" Target="8080" Default="8007" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8007</Config>
+</Container>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Amule</Name>
+  <Repository>tchabaud/amule</Repository>
+  <Registry>https://hub.docker.com/r/tchabaud/amule</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/120394-support-smartphonelover-amule-torrent-client/</Support>
+  <Project>https://github.com/t-chab/dockerfiles</Project>
+  <Overview>DESCRIPTION&#xD;
+aMule is a free peer-to-peer file sharing utility that works with the EDonkey network and the Kad network, offering similar features to eMule and adding others such as GeoIP (country flags).&#xD;
+&#xD;
+VERSION&#xD;
+1.0 (2022-02-23)</Overview>
+  <Category>Downloaders: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:4711]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/master/templates/aMule.xml</TemplateURL>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Amule.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1648364246</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>DESCRIPTION&#xD;
+aMule is a free peer-to-peer file sharing utility that works with the EDonkey network and the Kad network, offering similar features to eMule and adding others such as GeoIP (country flags).&#xD;
+&#xD;
+VERSION&#xD;
+1.0 (2022-02-23)</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4711</HostPort>
+        <ContainerPort>4711</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4662</HostPort>
+        <ContainerPort>4662</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4672</HostPort>
+        <ContainerPort>4672</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Amule</HostDir>
+      <ContainerDir>/incoming</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Amule</HostDir>
+      <ContainerDir>/temp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Amule</HostDir>
+      <ContainerDir>/home/amule/.aMule</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>WEBUI_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>AmuleWebUI-Reloaded</Value>
+      <Name>WEBUI_TEMPLATE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="4711" Default="4711" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4711</Config>
+  <Config Name="Port (TCP)" Target="4662" Default="4662" Mode="tcp" Description="Client to client transfers" Type="Port" Display="always" Required="false" Mask="false">4662</Config>
+  <Config Name="Port (UDP)" Target="4672" Default="4672" Mode="udp" Description="Extended aMule protocol, Queue Rating, File Reask Ping" Type="Port" Display="always" Required="false" Mask="false">4672</Config>
+  <Config Name="Storage (complete)" Target="/incoming" Default="/mnt/user/appdata/Amule" Mode="rw" Description="This is the location for complete downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Amule</Config>
+  <Config Name="Storage (incomplete)" Target="/temp" Default="/mnt/user/appdata/Amule" Mode="rw" Description="This is the location for incomplete downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Amule</Config>
+  <Config Name="Storage (config)" Target="/home/amule/.aMule" Default="/mnt/user/appdata/Amule" Mode="rw" Description="This is the location for the internal data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Amule</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="WEBUI_PWD" Target="WEBUI_PWD" Default="admin" Mode="" Description="Password for WebUI." Type="Variable" Display="advanced" Required="false" Mask="false">admin</Config>
+  <Config Name="WEBUI_TEMPLATE" Target="WEBUI_TEMPLATE" Default="default|AmuleWebUI-Reloaded" Mode="" Description="Alternative material WebUI design." Type="Variable" Display="advanced" Required="false" Mask="false">AmuleWebUI-Reloaded</Config>
+</Container>

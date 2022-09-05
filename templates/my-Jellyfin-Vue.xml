@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Jellyfin-Vue</Name>
+  <Repository>jellyfin/jellyfin-vue:unstable-static</Repository>
+  <Registry>https://hub.docker.com/r/jellyfin/jellyfin-vue</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://jellyfin.org/contact/</Support>
+  <Project>https://jellyfin.org</Project>
+  <Overview>A modern web client for Jellyfin based on Vue. It relies on Jellyfin to store and manage your media.</Overview>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other</Category>
+  <WebUI>http://[IP]:[PORT:2999]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Camc314/unraid-jellyfin-vue/master/static.xml</TemplateURL>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/JellyfinVue.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1659170872</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI - HTTP" Target="80" Default="2999" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2999</Config>
+</Container>

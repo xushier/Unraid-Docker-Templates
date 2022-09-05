@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>UnlockMusic</Name>
+  <Repository>ix64/unlock-music:v1.9.0</Repository>
+  <Registry>https://hub.docker.com/r/ix64/unlock-music/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ix64/unlock-music/</Support>
+  <Project/>
+  <Overview>Unlock encrypted music file in browser.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:3296]</WebUI>
+  <TemplateURL/>
+  <Icon>https://ghproxy.com/raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/163Music.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1661825726</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WEBUI" Target="80" Default="3296" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3296</Config>
+</Container>

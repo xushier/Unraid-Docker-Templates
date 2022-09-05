@@ -48,6 +48,7 @@ container=(\
 [40]="【Jellyfin 前端界面 Jellyfin-Vue】【官方版】" \
 [41]="【电驴下载器 Amule】【版】" \
 [42]="【远程控制服务 RustDesk】【官方版】" \
+[43]="【迅雷远程下载 Xunlei】【cnk3x 版】" \
 )
 
 template=(\
@@ -63,7 +64,7 @@ template=(\
 [10]="Filebrowser_80x86" \
 [11]="Filebrowser_OF" \
 [12]="Qinglong" \
-[13]="Composerize_OF" \
+[13]="Composerize" \
 [14]="Draw.io_OF" \
 [15]="KoodoReader_Xushier" \
 [16]="Snap2Html_321661" \
@@ -93,6 +94,7 @@ template=(\
 [40]="Jellyfin-Vue" \
 [41]="Amule" \
 [42]="RustDesk" \
+[43]="Xunlei" \
 )
 
 str=$'\n'
