@@ -1,7 +1,7 @@
 # Unraid Nas 容器安装模板获取脚本
 
 1. 模板内置另外一个项目的高清图标。
-2. 图标项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)  若打不开访问加速地址：[HD-Icons](https://hub.fastgit.xyz/xushier/HD-Icons)
+2. 图标项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)  若打不开访问加速地址：[HD-Icons](https://cdn.jsdelivr.net/gh/xushier/HD-Icons/)
 3. ~~脚本会将图标下载到`/boot/config/HD-Icons/`并将容器图标替换。~~
 4. 更新：图标使用加速代理地址，无需再下载。
 
