@@ -2,8 +2,7 @@
 
 1. 模板内置另外一个项目的高清图标。
 2. 图标项目地址：[HD-Icons](https://github.com/xushier/HD-Icons)  若打不开访问加速地址：[HD-Icons](https://cdn.jsdelivr.net/gh/xushier/HD-Icons/)
-3. ~~脚本会将图标下载到`/boot/config/HD-Icons/`并将容器图标替换。~~
-4. 更新：图标使用加速代理地址，无需再下载。
+3. 更新：图标使用加速代理地址，无需再下载。
 
 # 使用方法
 ## 单容器
@@ -15,10 +14,6 @@ curl -#O https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/
 如果没有梯子的话使用加速地址：
 ```
 curl -#O https://ghproxy.com/https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
-```
-或者镜像地址：
-```
-curl -#O https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/choices.sh && sh choices.sh
 ```
 **下载完后脚本会自动运行，然后根据提示选择对应的模板，完成之后在 Unraid Docker 界面添加容器，找到并选择模板，根据实际需要修改部分参数即可。**
 
@@ -35,10 +30,6 @@ curl -#O https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/
 如果没有梯子的话使用加速地址：
 ```
 curl -#O https://ghproxy.com/https://raw.githubusercontent.com/xushier/Unraid-Docker-Templates/main/compose.sh && sh compose.sh
-```
-或者镜像地址：
-```
-curl -#O https://raw.fastgit.org/xushier/Unraid-Docker-Templates/main/compose.sh && sh compose.sh
 ```
 下载完后脚本会自动运行。
 
