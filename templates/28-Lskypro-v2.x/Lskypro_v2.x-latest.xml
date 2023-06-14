@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lskypro</Name>
+  <Repository>coldpig/lskypro-docker:latest</Repository>
+  <Registry>https://hub.docker.com/r/coldpig/lskypro-docker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/lsky-org/lsky-pro</Support>
+  <Project>https://www.lsky.pro</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5611]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Lskypro_A.png</Icon>
+  <ExtraParams>--hostname=lskypro --restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686707353</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">5611</Config>
+  <Config Name="Data Path" Target="/var/www/html" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Lskypro</Config>
+</Container>

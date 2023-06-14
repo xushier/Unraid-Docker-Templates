@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SwingMusic</Name>
+  <Repository>xiaodid/swingmusic</Repository>
+  <Registry>https://hub.docker.com/r/xiaodid/swingmusic</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/swing-opensource/swingmusic</Support>
+  <Project>https://swingmusic.vercel.app</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI>http://[IP]:[PORT:1972]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Swingmusic_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686712605</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="1970" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">1972</Config>
+  <Config Name="Music Media Path" Target="/music" Default="" Mode="rw" Description="Music Media Path" Type="Path" Display="always" Required="false" Mask="false">Your Music Media Path</Config>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/SwingMusic</Config>
+</Container>

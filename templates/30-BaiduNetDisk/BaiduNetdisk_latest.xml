@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BaiduNetDisk</Name>
+  <Repository>johngong/baidunetdisk</Repository>
+  <Registry>https://hub.docker.com/r/johngong/baidunetdisk/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/johngong/baidunetdisk/</Support>
+  <Project>https://hub.docker.com/r/johngong/baidunetdisk/</Project>
+  <Overview>&#x5B98;&#x65B9;&#x767E;&#x5EA6;&#x7F51;&#x76D8;&#x5BA2;&#x6237;&#x7AEF;VNC&#x7248;:(baidunetdisk:4.10.5)&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:7888]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Baidudrive_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686728701</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/BaiduNetDisk</Config>
+  <Config Name="Web Port" Target="5800" Default="5800" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">7888</Config>
+  <Config Name="VNC Port" Target="5900" Default="5900" Mode="tcp" Description="VNC Port" Type="Port" Display="always" Required="false" Mask="false">7889</Config>
+  <Config Name="PUID" Target="USER_ID" Default="1000" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="GROUP_ID" Default="1000" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="VNC Display Width" Target="DISPLAY_WIDTH" Default="1366" Mode="" Description="VNC Display Width" Type="Variable" Display="always" Required="false" Mask="false">1366</Config>
+  <Config Name="VNC Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="VNC Display Height" Type="Variable" Display="always" Required="false" Mask="false">768</Config>
+  <Config Name="Download Path" Target="/mnt" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="false" Mask="false">Your Download Path</Config>
+  <Config Name="Password" Target="VNC_PASSWORD" Default="" Mode="" Description="Password" Type="Variable" Display="always" Required="false" Mask="false">Your Password</Config>
+</Container>

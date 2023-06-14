@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Heimdall</Name>
+  <Repository>linuxserver/heimdall:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/heimdall</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-heimdall/issues/new/choose</Support>
+  <Project>https://heimdall.site</Project>
+  <Overview>Heimdall(https://heimdall.site) is a way to organise all those links to your most used web sites and web applications in a simple way.&#xD;
+Simplicity is the key to Heimdall.&#xD;
+Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:Utilities Network:Web Network:Other spotlight:</Category>
+  <WebUI>http://[IP]:[PORT:8434]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Heimdall_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686713091</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="80" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">8434</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/heimdall" Mode="rw" Description="Contains all relevant configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Heimdall</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

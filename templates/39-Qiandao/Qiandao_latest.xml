@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qiandao</Name>
+  <Repository>asdaragon/qiandao:latest</Repository>
+  <Registry>https://hub.docker.com/r/asdaragon/qiandao</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://qd-today.github.io/qd</Support>
+  <Project>https://github.com/qd-today/qd</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3111]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Qiandao_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686712058</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3111</Config>
+  <Config Name="Config Path" Target="/usr/src/app/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qiandao</Config>
+  <Config Name="MAIL SMTP Address" Target="MAIL_SMTP" Default="" Mode="" Description="MAIL SMTP Address" Type="Variable" Display="always" Required="false" Mask="false">smtp.163.com</Config>
+  <Config Name="MAIL PORT" Target="MAIL_PORT" Default="" Mode="" Description="MAIL PORT" Type="Variable" Display="always" Required="false" Mask="false">25</Config>
+  <Config Name="MAIL USER" Target="MAIL_USER" Default="" Mode="" Description="MAIL USER" Type="Variable" Display="always" Required="false" Mask="false">MAIL USER</Config>
+  <Config Name="MAIL PASSWORD" Target="MAIL_PASSWORD" Default="" Mode="" Description="MAIL PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">MAIL PASSWORD</Config>
+  <Config Name="ACCESS DOMAIN" Target="DOMAIN" Default="" Mode="" Description="ACCESS DOMAIN" Type="Variable" Display="always" Required="false" Mask="false">163.com</Config>
+</Container>

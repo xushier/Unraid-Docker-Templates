@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Plex</Name>
+  <Repository>linuxserver/plex:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/plex</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-plex/issues/new/choose</Support>
+  <Project>https://plex.tv</Project>
+  <Overview>Plex(https://plex.tv) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. has always been a top priority. Straightforward design and bulk actions mean getting things done faster.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Plex_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686719621</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Media Path" Target="/mnt" Default="" Mode="rw" Description="Media goes here. Add as many as needed e.g. `/movies`, `/tv`, etc." Type="Path" Display="always" Required="true" Mask="false">Your Media Path</Config>
+  <Config Name="VERSION" Target="VERSION" Default="docker" Mode="" Description="Set whether to update plex or not - see Application Setup section." Type="Variable" Display="always" Required="true" Mask="false">public</Config>
+  <Config Name="PLEX CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="Optionally you can obtain a claim token from https://plex.tv/claim and input here. Keep in mind that the claim tokens expire within 4 minutes." Type="Variable" Display="always" Required="false" Mask="false">Your PLEX CLAIM</Config>
+  <Config Name="GPU" Target="" Default="" Mode="" Description="GPU" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="Web Port" Target="2266" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">2266</Config>
+  <Config Name="UDP" Target="32410" Default="" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="false" Mask="false">32410</Config>
+  <Config Name="UDP Port" Target="32412-32414" Default="" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="false" Mask="false">32412-32414</Config>
+  <Config Name="DLAN UDP Port" Target="32415" Default="" Mode="udp" Description="DLAN UDP Port" Type="Port" Display="always" Required="false" Mask="false">32415</Config>
+  <Config Name="DLAN TCP Port" Target="32416" Default="" Mode="tcp" Description="DLAN TCP Port" Type="Port" Display="always" Required="false" Mask="false">32416</Config>
+  <Config Name="Roku Port" Target="32417" Default="" Mode="tcp" Description="Roku Port" Type="Port" Display="always" Required="false" Mask="false">32417</Config>
+  <Config Name="Bonjour/Avahi Port" Target="32418" Default="" Mode="udp" Description="Bonjour/Avahi Port" Type="Port" Display="always" Required="false" Mask="false">32418</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/plex" Mode="rw" Description="Plex library location. *This can grow very large, 50gb+ is likely for a large collection.*" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Plex</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Portainer</Name>
+  <Repository>portainer/portainer-ce:alpine</Repository>
+  <Registry>https://registry.hub.docker.com/r/portainer/portainer/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69491-support-jj9987-portainer/</Support>
+  <Project>https://portainer.io</Project>
+  <Overview>Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:1811]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Portainer_B.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686645143</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="9000" Default="9000" Mode="tcp" Description="Web Port" Type="Port" Display="always-hide" Required="true" Mask="null">1811</Config>
+  <Config Name="Config Path" Target="/data" Default="/mnt/user/appdata/portainer" Mode="rw" Description="Config Path" Type="Path" Display="advanced-hide" Required="true" Mask="null">/mnt/user/appdata/Portainer</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Docker Socket" Type="Path" Display="advanced-hide" Required="true" Mask="null">/var/run/docker.sock</Config>
+</Container>

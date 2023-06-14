@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Freenom</Name>
+  <Repository>luolongfei/freenom</Repository>
+  <Registry>https://hub.docker.com/r/luolongfei/freenom/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/luolongfei/freenom</Support>
+  <Project>https://github.com/luolongfei/freenom</Project>
+  <Overview>Freenom &#x57DF;&#x540D;&#x81EA;&#x52A8;&#x7EED;&#x671F;&#xFF08;Docker &#x7248;&#x672C;&#xFF09;&#x3002;Automatically renew your freenom domain.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Freenom_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686719930</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Logs Path" Target="/app/logs" Default="" Mode="rw" Description="Logs Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Freenom/logs</Config>
+  <Config Name="Config Path" Target="/conf" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Freenom/conf</Config>
+</Container>

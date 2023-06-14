@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MemCached</Name>
+  <Repository>bitnami/memcached:latest</Repository>
+  <Registry>https://hub.docker.com/r/bitnami/memcached/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
+  <Project>https://memcached.org/</Project>
+  <Overview>Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Memcached_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686726818</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="11211" Default="11211" Mode="tcp" Description="Port" Type="Port" Display="always" Required="true" Mask="false">11211</Config>
+  <Config Name="Username" Target="MEMCACHED_USERNAME" Default="" Mode="" Description="Memcached Username if you want authentication " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Password" Target="MEMCACHED_PASSWORD" Default="" Mode="" Description="Memcache Password if you want authentication " Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

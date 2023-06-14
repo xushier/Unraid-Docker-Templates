@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>QL-Panel</Name>
+  <Repository>whyour/qinglong</Repository>
+  <Registry>https://hub.docker.com/r/whyour/qinglong/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/whyour/qinglong/</Support>
+  <Project/>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Qinglong_B.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686645458</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data Path" Target="/ql/data" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/QL-Panel</Config>
+  <Config Name="Web Port" Target="5700" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">2811</Config>
+</Container>

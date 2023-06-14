@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>KoodoReader</Name>
+  <Repository>xushier/koodo-reader:latest</Repository>
+  <Registry>https://hub.docker.com/r/xushier/koodo-reader/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/troyeguo/koodo-reader</Support>
+  <Project>https://koodo.960960.xyz</Project>
+  <Overview>Koodo Reader &#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x9605;&#x8BFB;&#x5668;&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:8015]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Koodoreader_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686725416</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">8015</Config>
+</Container>

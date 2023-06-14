@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Nginx</Name>
+  <Repository>linuxserver/nginx:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/nginx/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/42784-support-linuxserverio-nginx/</Support>
+  <Project>https://www.nginx.com/</Project>
+  <Overview>Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Network:Web Network:Proxy</Category>
+  <WebUI>http://[IP]:[PORT:1511]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Nginx_E.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686729941</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Default Web Port" Target="80" Default="1511" Mode="tcp" Description="Default Web Port" Type="Port" Display="always" Required="true" Mask="false">1511</Config>
+  <Config Name="Data Path" Target="/config" Default="" Mode="rw" Description="Data Path" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Nginx/www/</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Default Web SSL Port" Target="443" Default="1513" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">1513</Config>
+  <Config Name="Custom Web Port 1" Target="1512" Default="1512" Mode="tcp" Description="Custom Web Port 1" Type="Port" Display="advanced" Required="false" Mask="false">1512</Config>
+  <Config Name="Custom Web Port 2" Target="1515" Default="1515" Mode="tcp" Description="Custom Web Port 2" Type="Port" Display="advanced" Required="false" Mask="false">1515</Config>
+  <Config Name="Custom Web Port 3" Target="1516" Default="1516" Mode="tcp" Description="Custom Web Port 3" Type="Port" Display="advanced" Required="false" Mask="false">1516</Config>
+  <Config Name="Custom Web Port 4" Target="1518" Default="1518" Mode="tcp" Description="Custom Web Port 4" Type="Port" Display="advanced" Required="false" Mask="false">1518</Config>
+  <Config Name="Custom Web Port 5" Target="1519" Default="1519" Mode="tcp" Description="Custom Web Port 5" Type="Port" Display="advanced" Required="false" Mask="false">1519</Config>
+  <Config Name="Custom Web Port 6" Target="1520" Default="1520" Mode="tcp" Description="Custom Web Port 6" Type="Port" Display="advanced" Required="false" Mask="false">1520</Config>
+</Container>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Jfa-Go</Name>
+  <Repository>hrfee/jfa-go</Repository>
+  <Registry>https://hub.docker.com/r/hrfee/jfa-go/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hrfee/jfa-go</Support>
+  <Project>https://github.com/hrfee/jfa-go</Project>
+  <Overview>jfa-go is a user management app for Jellyfin (and now Emby) that provides invite-based account creation as well as other features that make one's instance much easier to manage.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8056]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Jfago_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686730150</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Jellyfin or Emby</Requires>
+  <Config Name="Web Port" Target="8056" Default="8056" Mode="tcp" Description="Port to use to access jfa-go webui." Type="Port" Display="always" Required="true" Mask="false">8056</Config>
+  <Config Name="Config Path" Target="/data" Default="/mnt/user/appdata/jfa-go" Mode="rw" Description="Path to wherever you want to store the config file and other data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Jfa-Go/</Config>
+  <Config Name="Timezone" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Timezone" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
+</Container>

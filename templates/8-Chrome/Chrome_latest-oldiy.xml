@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Chrome-oldiy</Name>
+  <Repository>oldiy/chrome-novnc:latest</Repository>
+  <Registry>https://hub.docker.com/r/oldiy/chrome-novnc/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/oldiy/chrome-novnc/</Support>
+  <Project>https://hub.docker.com/r/oldiy/chrome-novnc/</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:3811]/vnc.html</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Chrome_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686730472</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8083" Default="3811" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3811</Config>
+  <Config Name="VNC Port" Target="5900" Default="3822" Mode="tcp" Description="VNC Port" Type="Port" Display="always" Required="false" Mask="false">3822</Config>
+  <Config Name="Config Path" Target="/cfg" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Chrome/cfg</Config>
+  <Config Name="Download Path" Target="/root/Downloads" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Chrome/downloads</Config>
+  <Config Name="Enable CJK Font" Target="ENABLE_CJK_FONT" Default="1" Mode="" Description="Enable CJK Font" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Screen Resolution" Target="SCREEN_RESOLUTION" Default="1366x768" Mode="" Description="Screen Resolution" Type="Variable" Display="always" Required="false" Mask="false">1366x768</Config>
+  <Config Name="Timezone" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+</Container>

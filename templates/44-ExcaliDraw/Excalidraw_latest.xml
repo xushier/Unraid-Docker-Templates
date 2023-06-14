@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Excalidraw</Name>
+  <Repository>excalidraw/excalidraw</Repository>
+  <Registry>https://hub.docker.com/r/excalidraw/excalidraw</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/excalidraw/excalidraw/issues</Support>
+  <Project>https://github.com/excalidraw/excalidraw</Project>
+  <Overview>Virtual whiteboard for sketching hand-drawn like diagrams.&#xD;
+Collaborative and end-to-end encrypted.(1)&#xD;
+The Docker image is free of analytics and other tracking libraries.&#xD;
+---&#xD;
+1. At the moment, self-hosting your own instance doesn't support sharing or collaboration features.&#xD;
+We are working towards providing a full-fledged solution for self-hosting your own Excalidraw.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:54326]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Excalidraw_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686713980</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="5432" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">54326</Config>
+</Container>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Wbo</Name>
+  <Repository>xushier/wbo:latest</Repository>
+  <Registry>https://hub.docker.com/r/xushier/wbo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/lovasoa/whitebophir</Support>
+  <Project>https://wbo.ophir.dev</Project>
+  <Overview>WBO is an online collaborative whiteboard that is simple, easy to use and open-source.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8012]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Wbo_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686646333</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data Path" Target="/opt/app/server-data" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Wbo</Config>
+  <Config Name="Web Port" Target="80" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">8012</Config>
+</Container>

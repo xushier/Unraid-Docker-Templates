@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Aria2NG</Name>
+  <Repository>oldiy/aria2-ui-ng:latest</Repository>
+  <Registry>https://hub.docker.com/r/oldiy/aria2-ui-ng/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/oldiy/Docker-Aria2NG</Support>
+  <Project>https://github.com/oldiy/Docker-Aria2NG</Project>
+  <Overview>&#x7FA4;&#x6656;&#x53EF;&#x7528;&#x7684;Aria2+WebUI+AriaNG+FilesWeb&#xFF0C;&#x4E2D;&#x6587;&#x5B89;&#x88C5;&#x8BF4;&#x660E;&#x2014;&#x2014;&#x652F;&#x6301;&#x7FA4;&#x6656;&#xFF0C;&#x5A01;&#x8054;&#x901A;&#x7B49;&#x4E00;&#x5207;X86&#x7CFB;&#x7EDF;docker&#x90E8;&#x7F72;&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:3611]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Aria2_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686720308</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Download Path" Target="/data" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="false" Mask="false">Your Download Path</Config>
+  <Config Name="Config Path" Target="/conf" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Aria2NG</Config>
+  <Config Name="Web Port 1" Target="80" Default="3611" Mode="tcp" Description="Web Port 1" Type="Port" Display="always" Required="false" Mask="false">3611</Config>
+  <Config Name="Filebrowser Port" Target="8080" Default="3622" Mode="tcp" Description="Filebrowser Port" Type="Port" Display="always" Required="false" Mask="false">3622</Config>
+  <Config Name="Web Port 2" Target="81" Default="3655" Mode="tcp" Description="Web Port 2" Type="Port" Display="always" Required="false" Mask="false">3655</Config>
+  <Config Name="RPC Port" Target="6800" Default="3666" Mode="tcp" Description="RPC Port" Type="Port" Display="always" Required="false" Mask="false">3666</Config>
+  <Config Name="SECRET TOKEN" Target="SECRET" Default="" Mode="" Description="SECRET TOKEN" Type="Variable" Display="always" Required="false" Mask="true">Your SECRET TOKEN</Config>
+</Container>

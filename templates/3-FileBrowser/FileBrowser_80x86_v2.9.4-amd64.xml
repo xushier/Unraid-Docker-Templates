@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileBrowser</Name>
+  <Repository>80x86/filebrowser:2.9.4-amd64</Repository>
+  <Registry>https://hub.docker.com/r/80x86/filebrowser/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/80x86/filebrowser/</Support>
+  <Project>https://filebrowser.org</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:1611]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Filebrowser_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686705587</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="UMASK" Target="UMASK_SET" Default="000" Mode="" Description="UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="File Path" Target="/myfiles" Default="/" Mode="rw" Description="File Path" Type="Path" Display="always" Required="false" Mask="false">Your File Path</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/Filebrowser/config" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Filebrowser/config</Config>
+  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Web Port" Target="8082" Default="1611" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">1611</Config>
+  <Config Name="GPU" Target="" Default="/dev/dri/" Mode="" Description="GPU" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/</Config>
+  <Config Name="Custom File Path" Target="/mnt" Default="" Mode="rw" Description="Custom File Path" Type="Path" Display="always" Required="false" Mask="false">Your Custom File Path</Config>
+</Container>

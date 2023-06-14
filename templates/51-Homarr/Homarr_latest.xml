@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Homarr</Name>
+  <Repository>ghcr.io/ajnart/homarr:latest</Repository>
+  <Registry>https://hub.docker.com/r/ajnart/homarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/123478-support-smartphonelover-homarr/</Support>
+  <Project>https://github.com/ajnart/homarr</Project>
+  <Overview>DESCRIPTION&#xD;
+Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place.&#xD;
+&#xD;
+Live demo:&#xD;
+https://homarr.ajnart.fr/&#xD;
+&#xD;
+NOTES&#xD;
+&#x2022; The available tags to be used for this image, are: 'latest' (recommended) and 'dev'.&#xD;
+&#x2022; If you want to use your own icons (png/svg), place them in the configured directory of 'Storage (icons)'. Then, call them from Homarr URL field as '/icons/my_icon.ext'.&#xD;
+&#xD;
+VERSION&#xD;
+1.6 (2023-04-16)&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:Utilities Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:7575]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Homarr_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686721523</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="7575" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">7575</Config>
+  <Config Name="Icons Path" Target="/app/public/icons" Default="" Mode="rw" Description="This is the location for custom icons." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Homarr/icons</Config>
+  <Config Name="Config Path" Target="/app/data/configs" Default="" Mode="rw" Description="This is the location for the internal data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Homarr/configs</Config>
+  <Config Name="Listen Web Port" Target="PORT" Default="" Mode="" Description="If you need, you can customize the internal port using this variable." Type="Variable" Display="advanced" Required="false" Mask="false">7575</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="ro" Description="Gives Homarr the ability to restart, stop, start, refresh and remove containers as well as add them to the dashboard." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="DOCKER HOST" Target="DOCKER_HOST" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="DOCKER PORT" Target="DOCKER_PORT" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Default Color Scheme" Target="DEFAULT_COLOR_SCHEME" Default="dark|light" Mode="" Description="The default color scheme for the dashboard." Type="Variable" Display="advanced" Required="false" Mask="false">dark</Config>
+  <Config Name="Password" Target="PASSWORD" Default="" Mode="" Description="This password will protect the dashboard from unauthorized access." Type="Variable" Display="advanced" Required="false" Mask="false">Your Password</Config>
+  <Config Name="Disable Edit Mode" Target="DISABLE_EDIT_MODE" Default="false|true" Mode="" Description="Disable Edit Mode" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Edit Mode Password" Target="EDIT_MODE_PASSWORD" Default="" Mode="" Description="Set a password for edit mode." Type="Variable" Display="advanced" Required="false" Mask="false">Your Edit Mode Password</Config>
+</Container>

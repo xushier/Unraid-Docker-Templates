@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tautulli</Name>
+  <Repository>linuxserver/tautulli:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/tautulli</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-tautulli/issues/new/choose</Support>
+  <Project>http://tautulli.com</Project>
+  <Overview>Tautulli(http://tautulli.com) is a python based web application for monitoring, analytics and notifications for Plex Media Server.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>MediaServer:Other Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8181]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Tautulli_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686712949</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8181" Default="8181" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">8181</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/tautulli" Mode="rw" Description="Contains tautulli config and database." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Tautulli</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

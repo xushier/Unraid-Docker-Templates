@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Jellyfin</Name>
+  <Repository>nyanmisaka/jellyfin</Repository>
+  <Registry>https://hub.docker.com/r/nyanmisaka/jellyfin</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/jellyfin/jellyfin</Support>
+  <Project>https://github.com/jellyfin/jellyfin</Project>
+  <Overview>Jellyfin(https://jellyfin.github.io/) is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>MediaApp:Video MediaApp:Music</Category>
+  <WebUI>http://[IP]:[PORT:8075]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Jellyfin_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686731259</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8096" Default="8096" Mode="tcp" Description="Http webUI." Type="Port" Display="always" Required="true" Mask="false">8075</Config>
+  <Config Name="Media Path" Target="/mnt" Default="" Mode="rw" Description="Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc." Type="Path" Display="always" Required="true" Mask="false">Your Media Path</Config>
+  <Config Name="GPU" Target="" Default="" Mode="" Description="GPU" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/jellyfin" Mode="rw" Description="Jellyfin data storage location. *This can grow very large, 50gb+ is likely for a large collection.*" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Jellyfin</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+  <Config Name="HTTP PROXY" Target="HTTP_PROXY" Default="" Mode="" Description="HTTP PROXY" Type="Variable" Display="advanced" Required="false" Mask="false">http://xxx.xxx.xxx.xxx:7890</Config>
+  <Config Name="HTTPS PROXY" Target="HTTPS_PROXY" Default="" Mode="" Description="HTTPS PROXY" Type="Variable" Display="advanced" Required="false" Mask="false">http://xxx.xxx.xxx.xxx:7890</Config>
+</Container>

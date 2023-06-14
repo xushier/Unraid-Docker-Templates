@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Dashdot</Name>
+  <Repository>mauricenino/dashdot:latest</Repository>
+  <Registry>https://hub.docker.com/r/mauricenino/dashdot</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/123795-support-smartphonelover-dash-dashdot/</Support>
+  <Project>https://github.com/MauriceNino/dashdot</Project>
+  <Overview>DESCRIPTION&#xD;
+Dash. (or Dashdot) is a modern server dashboard, developed with a simple, but performant stack and designed with glassmorphism in mind.&#xD;
+&#xD;
+Live demo:&#xD;
+https://dash.mauz.io/&#xD;
+&#xD;
+NOTES&#xD;
+&#x2022; You have other variables available to use, if needed. Check the official docs to know more.&#xD;
+&#x2022; The 'privileged' flag is needed to determine the memory and storage info.&#xD;
+&#x2022; There are two docker image tags available: 'latest' and 'dev'.&#xD;
+&#xD;
+VERSION&#xD;
+1.2 (2023-03-04)&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Dashdot_A.png</Icon>
+  <ExtraParams>--env-file=/mnt/user/appdata/Dashdot/.env --restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686712776</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="3001" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3023</Config>
+  <Config Name="SystemInfo Path" Target="/mnt/host" Default="" Mode="ro" Description="For reading the usage stats of all drives, and collect other information from the OS." Type="Path" Display="always" Required="false" Mask="false">/</Config>
+</Container>

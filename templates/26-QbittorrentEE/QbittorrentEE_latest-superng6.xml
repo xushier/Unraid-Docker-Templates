@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>QbittorrentEE</Name>
+  <Repository>superng6/qbittorrentee</Repository>
+  <Registry>https://hub.docker.com/r/superng6/qbittorrentee/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/SuperNG6/Docker-qBittorrent-Enhanced-Edition</Support>
+  <Project>https://github.com/SuperNG6/Docker-qBittorrent-Enhanced-Edition</Project>
+  <Overview>qBittorrent&#x589E;&#x5F3A;&#x7248;&#xFF0C;&#x9632;&#x5438;&#x8840;&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:1922]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Qbittorrent_B.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686723058</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/QbittorrentEE_Superng6</Config>
+  <Config Name="Download Path" Target="/downloads" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="false" Mask="false">Your Download Path</Config>
+  <Config Name="TCP Port" Target="6881" Default="6888" Mode="tcp" Description="TCP Port" Type="Port" Display="always" Required="false" Mask="false">6888</Config>
+  <Config Name="UDP Port" Target="6881" Default="6888" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="false" Mask="false">6888</Config>
+  <Config Name="Web Port" Target="1922" Default="1922" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">1922</Config>
+  <Config Name="Listen Web Port" Target="WEBUIPORT" Default="" Mode="" Description="Listen Web Port" Type="Variable" Display="always" Required="false" Mask="false">1922</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+</Container>

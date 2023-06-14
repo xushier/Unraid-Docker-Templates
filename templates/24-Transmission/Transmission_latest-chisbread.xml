@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Transmission-CB</Name>
+  <Repository>chisbread/transmission:latest</Repository>
+  <Registry>https://hub.docker.com/r/chisbread/transmission</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ChisBread/transmission_skip_patch</Support>
+  <Project>https://transmissionbt.com</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:2211]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Transmission_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686723886</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="2211" Default="2211" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">2211</Config>
+  <Config Name="TCP Port" Target="51413" Default="51413" Mode="tcp" Description="TCP Port" Type="Port" Display="always" Required="false" Mask="false">51413</Config>
+  <Config Name="UDP Port" Target="51413" Default="51413" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="false" Mask="false">51413</Config>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Transmission-CB/config</Config>
+  <Config Name="Download Path" Target="/downloads" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="false" Mask="false">Your Download Path</Config>
+  <Config Name="Watch Path" Target="/watch" Default="" Mode="rw" Description="Watch Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Transmission-CB/watch</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Theme" Target="TRANSMISSION_WEB_HOME" Default="" Mode="" Description="Theme" Type="Variable" Display="always" Required="false" Mask="false">/transmission-web-control</Config>
+  <Config Name="Theme Path" Target="/transmission-web-control" Default="" Mode="rw" Description="Theme Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Transmission-CB/transmission-web-control</Config>
+  <Config Name="Listen Web Port" Target="RPCPORT" Default="2211" Mode="" Description="Listen Web Port" Type="Variable" Display="always" Required="false" Mask="false">2211</Config>
+  <Config Name="Listen BT Port" Target="PEERPORT" Default="51413" Mode="" Description="Listen BT Port" Type="Variable" Display="always" Required="false" Mask="false">51413</Config>
+  <Config Name="Username" Target="USER" Default="" Mode="" Description="Username" Type="Variable" Display="always" Required="false" Mask="false">Your Username</Config>
+  <Config Name="Password" Target="PASS" Default="" Mode="" Description="Password" Type="Variable" Display="always" Required="false" Mask="true">Your Password</Config>
+</Container>

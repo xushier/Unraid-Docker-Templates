@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Chrome-ich777</Name>
+  <Repository>ich777/chrome:latest</Repository>
+  <Registry>https://hub.docker.com/r/ich777/chrome/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ich777/chrome/</Support>
+  <Project>https://hub.docker.com/r/ich777/chrome/</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:3812]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Chrome_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686730872</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="VNC Display Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="VNC Display Width" Type="Variable" Display="always" Required="false" Mask="false">1366</Config>
+  <Config Name="VNC Display Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="VNC Display Height" Type="Variable" Display="always" Required="false" Mask="false">768</Config>
+  <Config Name="PUID" Target="UID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="GID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Data Permission" Target="DATA_PERM" Default="" Mode="" Description="Data Permission" Type="Variable" Display="always" Required="false" Mask="false">770</Config>
+  <Config Name="Data Path" Target="/chrome" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Chrome</Config>
+  <Config Name="Web Port" Target="8080" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3812</Config>
+</Container>

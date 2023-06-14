@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Drawio</Name>
+  <Repository>jgraph/drawio</Repository>
+  <Registry>https://hub.docker.com/r/jgraph/drawio</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/jgraph/drawio</Project>
+  <Overview>A lightweight diagram drawing application.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3311]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Drawio_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686725128</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8080" Default="3000" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3311</Config>
+  <Config Name="Web SSL Port" Target="8443" Default="3443" Mode="tcp" Description="Web SSL Port" Type="Port" Display="advanced" Required="false" Mask="false">3322</Config>
+  <Config Name="Enable Lets Encrypt" Target="LETS_ENCRYPT_ENABLED" Default="false" Mode="{3}" Description="Enables Let's Encrypt certificate instead of self-signed certificates" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Public DNS" Target="PUBLIC_DNS" Default="" Mode="" Description=" DNS domain to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Organisation Unit" Target="ORGANISATION_UNIT" Default="" Mode="" Description="Organisation unit to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Organisation" Target="ORGANISATION" Default="" Mode="" Description="Organisation name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="City" Target="CITY" Default="" Mode="" Description="City name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="State" Target="STATE" Default="" Mode="" Description=" State name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Country Code" Target="COUNTRY_CODE" Default="" Mode="" Description="Country code to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="KetStore Pass" Target="KEYSTORE_PASS" Default="" Mode="" Description="'.keystore'/.jks' store password" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Key Pass" Target="KEY_PASS" Default="" Mode="" Description="Private key password " Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>

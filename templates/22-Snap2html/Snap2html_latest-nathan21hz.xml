@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Snap2html-nathan</Name>
+  <Repository>nathan21hz/linuxdir2html</Repository>
+  <Registry>https://hub.docker.com/r/nathan21hz/linuxdir2html</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/homeisfar/LinuxDir2HTML</Support>
+  <Project>https://github.com/homeisfar/LinuxDir2HTML</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686727610</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="File Path" Target="/Scan" Default="" Mode="rw" Description="File Path" Type="Path" Display="always" Required="false" Mask="false">Your File Path</Config>
+  <Config Name="Output Path" Target="/out" Default="" Mode="rw" Description="Output Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Snap2html</Config>
+</Container>

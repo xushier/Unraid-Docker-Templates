@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FreeGamesClaimer</Name>
+  <Repository>ghcr.io/vogler/free-games-claimer</Repository>
+  <Registry>https://github.com/vogler/free-games-claimer/pkgs/container/free-games-claimer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Nackophilz/unraid_templates/issues</Support>
+  <Project>https://github.com/vogler/free-games-claimer</Project>
+  <Overview>FreeGamesClaimer is a program that will allow you to retrieve your free games and add them to your library from different platforms such as:&#xD;
+&#xD;
+EpicGames &#xD;
+GOG &#xD;
+Amazon Gaming &#xD;
+Microsoft (coming soon) &#xD;
+&#xD;
+If you only want to use specific store and not all, you can add this in you're post arguments: &#xD;
+bash -c "node epic-games.js; node gog.js; node prime-gaming.js" &#xD;
+You can choose only one of them, or two of them, remember to separate each node with ";" and you're good to go !&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:6183]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Freegamesclaimer_A.png</Icon>
+  <ExtraParams/>
+  <PostArgs>node epic-games.js</PostArgs>
+  <CPUset/>
+  <DateInstalled>1686713364</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data Path" Target="/fgc/data" Default="/mnt/user/appdata/fgc" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/FGC</Config>
+  <Config Name="Generic Email" Target="EMAIL" Default="email" Mode="" Description="Default email for all your applications" Type="Variable" Display="always" Required="false" Mask="false">email</Config>
+  <Config Name="Generic Password" Target="PASSWORD" Default="xxxx" Mode="" Description="Default password for all your applications" Type="Variable" Display="always" Required="false" Mask="true">xxxx</Config>
+  <Config Name="Epic Games Mail" Target="EG_EMAIL" Default="" Mode="" Description="Epic Games email for login. Overrides EMAIL." Type="Variable" Display="always" Required="false" Mask="false">Your Epic Games Mail</Config>
+  <Config Name="Epic Games Password" Target="EG_PASSWORD" Default="" Mode="" Description="Epic Games password for login. Overrides PASSWORD." Type="Variable" Display="always" Required="false" Mask="true">Your Epic Games Password</Config>
+  <Config Name="Epic Games MFA OTP" Target="EG_OTPKEY" Default="" Mode="" Description="Epic Games MFA OTP key." Type="Variable" Display="always" Required="false" Mask="false">Your Epic Games MFA OTP</Config>
+  <Config Name="Prime Gaming Mail" Target="PG_EMAIL" Default="" Mode="" Description="Prime Gaming email for login. Overrides EMAIL." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Prime Gaming Password" Target="PG_PASSWORD" Default="" Mode="" Description="Prime Gaming password for login. Overrides PASSWORD." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Prime Gaming MFA OTP" Target="PG_OTPKEY" Default="" Mode="" Description="Prime Gaming MFA OTP key." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Prime Gaming Redeem on external store" Target="PG_REDEEM" Default="0" Mode="" Description="Prime Gaming: try to redeem keys on external stores (experimental)." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="GOG Mail" Target="GOG_EMAIL" Default="" Mode="" Description="GOG email for login. Overrides EMAIL." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GOG Password" Target="GOG_PASSWORD" Default="" Mode="" Description="GOG password for login. Overrides PASSWORD." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Web Port" Target="6080" Default="6080" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">6183</Config>
+  <Config Name="Notification" Target="NOTIFY" Default="" Mode="" Description="Notification :https://github.com/caronc/apprise#productivity-based-notifications to make a configuration (based on apprise)." Type="Variable" Display="always" Required="false" Mask="false">mailto://email-prefix:password@xxx.com</Config>
+  <Config Name="WebUI SHOW" Target="SHOW" Default="1" Mode="" Description="Show browser if 1. Default for Docker, not shown when running outside." Type="Variable" Display="advanced-hide" Required="true" Mask="false">1</Config>
+</Container>

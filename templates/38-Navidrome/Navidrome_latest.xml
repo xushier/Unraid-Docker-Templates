@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Navidrome</Name>
+  <Repository>deluan/navidrome</Repository>
+  <Registry>https://hub.docker.com/r/deluan/navidrome/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/deluan/navidrome</Project>
+  <Overview>Modern Music Server and Streamer compatible with Subsonic/Airsonic.&#xD;
+&#xD;
+https://www.navidrome.org&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>MediaServer:Music</Category>
+  <WebUI>http://[IP]:[PORT:8032]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Navidrome_B.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686712355</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="4533" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">8032</Config>
+  <Config Name="Config Path" Target="/data" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Navidrome</Config>
+  <Config Name="Music Media Path" Target="/music" Default="" Mode="rw" Description="Music Media Path" Type="Path" Display="always" Required="false" Mask="false">Your Music Media Path</Config>
+  <Config Name="Log Level" Target="ND_LOGLEVEL" Default="" Mode="" Description="Log Level" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Timeout" Target="ND_SESSIONTIMEOUT" Default="" Mode="" Description="Timeout" Type="Variable" Display="always" Required="false" Mask="false">24h</Config>
+  <Config Name="Image Cache Size" Target="ND_IMAGECACHESIZE" Default="" Mode="" Description="Image Cache Size" Type="Variable" Display="always" Required="false" Mask="false">200MB</Config>
+  <Config Name="Transcode" Target="ND_ENABLETRANSCODINGCONFIG" Default="" Mode="" Description="Transcode" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>

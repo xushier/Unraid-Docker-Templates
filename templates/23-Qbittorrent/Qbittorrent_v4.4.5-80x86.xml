@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qbittorrent_80x86</Name>
+  <Repository>80x86/qbittorrent:4.4.5-37-minimal-amd64-full</Repository>
+  <Registry>https://hub.docker.com/r/80x86/qbittorrent</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/80x86/qbittorrent</Support>
+  <Project>https://hub.docker.com/r/80x86/qbittorrent</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:1911]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Qbittorrent_B.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686722421</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Download Path" Target="/downloads" Default="" Mode="rw" Description="Download Path" Type="Path" Display="always" Required="true" Mask="false">Your Download Path</Config>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Qbittorrent_80x86/config</Config>
+  <Config Name="Web Port" Target="1911" Default="1911" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">1911</Config>
+  <Config Name="TCP Port" Target="56688" Default="56688" Mode="tcp" Description="TCP Port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
+  <Config Name="UDP Port" Target="56688" Default="56688" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="true" Mask="false">56688</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="Listen Web Port" Target="WEB_PORT" Default="1911" Mode="" Description="Listen Web Port" Type="Variable" Display="always" Required="true" Mask="false">1911</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="UMASK" Target="UMASK_SET" Default="" Mode="" Description="UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Listen BT Port" Target="BT_PORT" Default="" Mode="" Description="Listen BT Port" Type="Variable" Display="always" Required="false" Mask="false">56688</Config>
+  <Config Name="Auth Server Address" Target="FB_AUTH_SERVER_ADDR" Default="" Mode="" Description="Auth Server Address" Type="Variable" Display="always" Required="false" Mask="false">Your Server Address</Config>
+  <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Qbittorrent_80x86/data</Config>
+</Container>

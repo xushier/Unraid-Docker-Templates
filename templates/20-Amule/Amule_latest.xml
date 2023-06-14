@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Amule</Name>
+  <Repository>tchabaud/amule</Repository>
+  <Registry>https://hub.docker.com/r/tchabaud/amule</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/120394-support-smartphonelover-amule-torrent-client/</Support>
+  <Project>https://github.com/t-chab/dockerfiles</Project>
+  <Overview>DESCRIPTION&#xD;
+aMule is a free peer-to-peer file sharing utility that works with the EDonkey network and the Kad network, offering similar features to eMule and adding others such as GeoIP (country flags).&#xD;
+&#xD;
+VERSION&#xD;
+1.0 (2022-02-23)&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Downloaders: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:4711]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Amule_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686726115</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="4711" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">4711</Config>
+  <Config Name="TCP Port" Target="4662" Default="" Mode="tcp" Description="Client to client transfers" Type="Port" Display="always" Required="false" Mask="false">4662</Config>
+  <Config Name="UDP Port" Target="4672" Default="" Mode="udp" Description="Extended aMule protocol, Queue Rating, File Reask Ping" Type="Port" Display="always" Required="false" Mask="false">4672</Config>
+  <Config Name="Completed Path" Target="/incoming" Default="" Mode="rw" Description="This is the location for complete downloads." Type="Path" Display="always" Required="true" Mask="false">Your Download Completed Path</Config>
+  <Config Name="Incompleted Path" Target="/temp" Default="" Mode="rw" Description="This is the location for incomplete downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Amule/incompleted</Config>
+  <Config Name="Config Path" Target="/home/amule/.aMule" Default="" Mode="rw" Description="This is the location for the internal data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Amule/config</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
+  <Config Name="Password" Target="WEBUI_PWD" Default="" Mode="" Description="Password for WebUI." Type="Variable" Display="advanced" Required="false" Mask="false">Your Password</Config>
+  <Config Name="Theme" Target="WEBUI_TEMPLATE" Default="default|AmuleWebUI-Reloaded" Mode="" Description="Alternative material WebUI design." Type="Variable" Display="advanced" Required="false" Mask="false">default</Config>
+</Container>

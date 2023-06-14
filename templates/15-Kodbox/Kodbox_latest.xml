@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Kodbox</Name>
+  <Repository>kodcloud/kodbox:latest</Repository>
+  <Registry>https://hub.docker.com/r/kodcloud/kodbox/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/kodcloud/kodbox/</Support>
+  <Project>https://kodcloud.com</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3911]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Kodcloud_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686706756</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="80" Default="3911" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">3911</Config>
+  <Config Name="Data Path" Target="/var/www/html" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Kodbox</Config>
+  <Config Name="Custom Data Path" Target="/mnt" Default="/mnt/user" Mode="rw" Description="Custom Data Path" Type="Path" Display="always" Required="false" Mask="false">Your Custom Data Path</Config>
+  <Config Name="DATABASE_NAME" Target="MYSQL_DATABASE" Default="" Mode="" Description="DATABASE_NAME" Type="Variable" Display="always" Required="false" Mask="false">Kodbox</Config>
+  <Config Name="DATABASE_USER" Target="MYSQL_USER" Default="" Mode="" Description="DATABASE_USER" Type="Variable" Display="always" Required="false" Mask="false">Kodbox</Config>
+  <Config Name="DATABASE_PASSWORD" Target="MYSQL_PASSWORD" Default="" Mode="" Description="DATABASE_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">MYSQL_PASSWORD</Config>
+  <Config Name="DATABASE_HOST" Target="MYSQL_SERVER" Default="" Mode="" Description="DATABASE_HOST" Type="Variable" Display="always" Required="false" Mask="false">MYSQL_SERVER</Config>
+  <Config Name="DATABASE_PORT" Target="MYSQL_PORT" Default="" Mode="" Description="DATABASE_PORT" Type="Variable" Display="always" Required="false" Mask="false">MYSQL_PORT</Config>
+  <Config Name="REDIS_SESSION_TYPE" Target="SESSION_TYPE" Default="" Mode="" Description="REDIS_SESSION_TYPE" Type="Variable" Display="always" Required="false" Mask="false">redis</Config>
+  <Config Name="REDIS_HOST" Target="SESSION_HOST" Default="" Mode="" Description="REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">REDIS_HOST</Config>
+  <Config Name="REDIS_PORT" Target="SESSION_PORT" Default="" Mode="" Description="REDIS_PORT" Type="Variable" Display="always" Required="false" Mask="false">REDIS_PORT</Config>
+  <Config Name="KODBOX_ADMIN_USER" Target="KODBOX_ADMIN_USER" Default="" Mode="" Description="KODBOX_ADMIN_USER" Type="Variable" Display="always" Required="false" Mask="false">KODBOX_ADMIN_USER</Config>
+  <Config Name="KODBOX_ADMIN_PASSWORD" Target="KODBOX_ADMIN_PASSWORD" Default="" Mode="" Description="KODBOX_ADMIN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">KODBOX_ADMIN_PASSWORD</Config>
+</Container>

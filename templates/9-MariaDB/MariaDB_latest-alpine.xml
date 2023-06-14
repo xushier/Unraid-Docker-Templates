@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MariaDB</Name>
+  <Repository>linuxserver/mariadb:alpine</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/mariadb/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/40737-support-linuxserverio-mariadb/</Support>
+  <Project>https://mariadb.org/</Project>
+  <Overview>An Enhanced drop in replacement for Mysql.&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Network:Other MediaApp:Other Other: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:1111]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Mariadb_A.png</Icon>
+  <ExtraParams>--hostname=mariadb --restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686646914</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="3306" Default="1111" Mode="tcp" Description="Port" Type="Port" Display="always" Required="true" Mask="false">1111</Config>
+  <Config Name="MYSQL_ROOT_PASSWORD" Target="MYSQL_ROOT_PASSWORD" Default="0" Mode="" Description="MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">UnMYSQL_ROOT_PASSWORD</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/MariaDB" Mode="rw" Description="Data Path" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/MariaDB</Config>
+</Container>

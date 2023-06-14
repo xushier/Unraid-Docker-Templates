@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Aliyundrive-Webdav</Name>
+  <Repository>messense/aliyundrive-webdav</Repository>
+  <Registry>https://hub.docker.com/r/messense/aliyundrive-webdav/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/messense/aliyundrive-webdav</Support>
+  <Project>https://github.com/messense/aliyundrive-webdav</Project>
+  <Overview>&#x963F;&#x91CC;&#x4E91;&#x76D8; WebDAV&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:2412]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Alidrive_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686721846</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8080" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">2412</Config>
+  <Config Name="Config Path" Target="/etc/aliyundrive-webdav/" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Aliyundrive-Webdav</Config>
+  <Config Name="Refresh Token" Target="REFRESH_TOKEN" Default="" Mode="" Description="Refresh Token" Type="Variable" Display="always" Required="false" Mask="false">Your Refresh Token</Config>
+  <Config Name="Username" Target="WEBDAV_AUTH_USER" Default="" Mode="" Description="Username" Type="Variable" Display="always" Required="false" Mask="false">Your Username</Config>
+  <Config Name="Password" Target="WEBDAV_AUTH_PASSWORD" Default="" Mode="" Description="Password" Type="Variable" Display="always" Required="false" Mask="true">Your Password</Config>
+</Container>

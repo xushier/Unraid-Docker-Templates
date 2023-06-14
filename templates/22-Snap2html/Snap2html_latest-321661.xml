@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Snap2html-321661</Name>
+  <Repository>321661/snap2html</Repository>
+  <Registry>https://hub.docker.com/r/321661/snap2html/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/321661/snap2html/</Support>
+  <Project>https://hub.docker.com/r/321661/snap2html/</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686727474</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="File Path" Target="/Scan" Default="" Mode="rw" Description="File Path" Type="Path" Display="always" Required="false" Mask="false">Your File Path</Config>
+  <Config Name="Output Path" Target="/out" Default="" Mode="rw" Description="Output Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Snap2html</Config>
+</Container>
