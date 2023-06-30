@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>FileBrowser</Name>
-  <Repository>80x86/filebrowser:2.9.4-amd64</Repository>
+  <Repository>80x86/filebrowser:2.10.3-amd64</Repository>
   <Registry>https://hub.docker.com/r/80x86/filebrowser/</Registry>
   <Network>bridge</Network>
   <MyIP/>

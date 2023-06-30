@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Clash</Name>
+  <Repository>dreamacro/clash:latest</Repository>
+  <Registry>https://hub.docker.com/r/dreamacro/clash</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Dreamacro/clash</Support>
+  <Project>https://github.com/Dreamacro/clash</Project>
+  <Overview>YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Network:Proxy Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Clash_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1687152926</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="28688" Default="" Mode="tcp" Description="Port" Type="Port" Display="always" Required="false" Mask="false">28688</Config>
+  <Config Name="Config Path" Target="/root/.config/clash/config.yaml" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Clash/Your-Config-File.yml</Config>
+  <Config Name="HTTP Port" Target="7890" Default="" Mode="tcp" Description="HTTP Port" Type="Port" Display="always" Required="false" Mask="false">7890</Config>
+  <Config Name="Socks Port" Target="7891" Default="" Mode="tcp" Description="Socks Port" Type="Port" Display="always" Required="false" Mask="false">7891</Config>
+  <Config Name="Controller Port" Target="9090" Default="" Mode="tcp" Description="Controller Port" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+</Container>
