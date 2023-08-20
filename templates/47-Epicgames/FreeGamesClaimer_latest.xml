@@ -20,7 +20,7 @@ If you only want to use specific store and not all, you can add this in you're p
 bash -c "node epic-games.js; node gog.js; node prime-gaming.js" &#xD;
 You can choose only one of them, or two of them, remember to separate each node with ";" and you're good to go !&#xD;
 &#xD;
-YouTube: https://www.youtube.com/channel/UCPj4GP1FxDt0I23GhctHRFA&#xD;
+YouTube: https://www.youtube.com/@xiaoditx&#xD;
 Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
 Icons: https://github.com/xushier/HD-Icons&#xD;
 BiliBili: https://space.bilibili.com/32313260&#xD;

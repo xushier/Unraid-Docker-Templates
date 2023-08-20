@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LinkEase</Name>
+  <Repository>linkease/linkease</Repository>
+  <Registry>https://hub.docker.com/r/linkease/linkease</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://doc.linkease.com/zh/guide/linkease</Support>
+  <Project>https://www.linkease.com</Project>
+  <Overview>YouTube: https://www.youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Backup: Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:8897]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Linkease_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1692539753</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8897" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">8897</Config>
+  <Config Name="Data Path" Target="/linkease-data" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/LinkEase/data</Config>
+  <Config Name="Config Path" Target="/linkease-config" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/LinkEase/config</Config>
+  <Config Name="Time Path" Target="/etc/localtime" Default="" Mode="ro" Description="Time Path" Type="Path" Display="always" Required="false" Mask="false">/etc/localtime</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Personal Data" Target="/mydata" Default="" Mode="rw" Description="Personal Data" Type="Path" Display="always" Required="false" Mask="false">Your Personal Data</Config>
+</Container>

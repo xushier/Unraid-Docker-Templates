@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Nascab</Name>
+  <Repository>ypptec/nascab:latest</Repository>
+  <Registry>https://hub.docker.com/r/ypptec/nascab</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.nascab.cn</Support>
+  <Project>https://www.nascab.cn</Project>
+  <Overview>YouTube: https://www.youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Backup: Cloud: Tools: MediaApp:Video MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:6592]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Nascab_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1692539711</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Http Port" Target="80" Default="" Mode="tcp" Description="Web Http Port" Type="Port" Display="always" Required="true" Mask="false">6592</Config>
+  <Config Name="WebDAV Port" Target="90" Default="" Mode="tcp" Description="WebDAV Port" Type="Port" Display="always" Required="false" Mask="false">6593</Config>
+  <Config Name="FTP Port" Target="21" Default="" Mode="tcp" Description="FTP Port" Type="Port" Display="always" Required="false" Mask="false">6594</Config>
+  <Config Name="Database &amp;amp; Cache Path" Target="/root/.local/share/nascab" Default="" Mode="rw" Description="Database &amp;amp; Cache Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Nascab</Config>
+  <Config Name="Personal Data" Target="/mydata" Default="" Mode="rw" Description="Personal Data" Type="Path" Display="always" Required="false" Mask="false">Your Personal Data</Config>
+</Container>
