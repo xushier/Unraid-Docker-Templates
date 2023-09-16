@@ -27,7 +27,6 @@ WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Port" Target="28688" Default="" Mode="tcp" Description="Port" Type="Port" Display="always" Required="false" Mask="false">28688</Config>
   <Config Name="Config Path" Target="/root/.config/clash/config.yaml" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Clash/Your-Config-File.yml</Config>
   <Config Name="HTTP Port" Target="7890" Default="" Mode="tcp" Description="HTTP Port" Type="Port" Display="always" Required="false" Mask="false">7890</Config>
   <Config Name="Socks Port" Target="7891" Default="" Mode="tcp" Description="Socks Port" Type="Port" Display="always" Required="false" Mask="false">7891</Config>
