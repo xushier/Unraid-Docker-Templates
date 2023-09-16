@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>StirlingPDF</Name>
+  <Repository>frooodle/s-pdf</Repository>
+  <Registry>https://hub.docker.com/r/frooodle/s-pdf</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Frooodle/Stirling-PDF</Support>
+  <Project>https://github.com/Frooodle/Stirling-PDF</Project>
+  <Overview>YouTube: https://www.youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:6520]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Stirlingpdf_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1686818589</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8080" Default="" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="false" Mask="false">6520</Config>
+  <Config Name="OCR Language Packs Path" Target="/usr/share/tesseract-ocr/4.00/tessdata" Default="" Mode="rw" Description="OCR Language Packs Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/StirlingPDF/data</Config>
+  <Config Name="Home Name" Target="APP_HOME_NAME" Default="" Mode="" Description="Home Name" Type="Variable" Display="always" Required="false" Mask="false">&#x5C0F;&#x8FEA; PDF</Config>
+  <Config Name="Home Description" Target="APP_HOME_DESCRIPTION" Default="" Mode="" Description="Home Description" Type="Variable" Display="always" Required="false" Mask="false">&#x5C0F;&#x8FEA;&#x7684; PDF &#x5DE5;&#x574A;</Config>
+  <Config Name="Navbar Name" Target="APP_NAVBAR_NAME" Default="" Mode="" Description="Navbar Name" Type="Variable" Display="always" Required="false" Mask="false">&#x5C0F;&#x8FEA; PDF</Config>
+  <Config Name="Google Visibility" Target="ALLOW_GOOGLE_VISIBILITY" Default="false|true" Mode="" Description="Google Visibility" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Root Position" Target="APP_ROOT_PATH" Default="" Mode="" Description="Root Position" Type="Variable" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="Locale" Target="APP_LOCALE" Default="" Mode="" Description="Locale. zh_CN&#x3001;en_GB&#x3001;fr_FR,etc." Type="Variable" Display="always" Required="false" Mask="false">zh_CN</Config>
+  <Config Name="Config Path" Target="/configs" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/StirlingPDF/configs</Config>
+</Container>
