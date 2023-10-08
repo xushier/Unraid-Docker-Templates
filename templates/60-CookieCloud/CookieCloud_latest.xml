@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CookieCloud</Name>
+  <Repository>easychen/cookiecloud:latest</Repository>
+  <Registry>https://hub.docker.com/r/easychen/cookiecloud</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/easychen/cookiecloud</Support>
+  <Project>https://github.com/easychen/CookieCloud</Project>
+  <Overview>Cookie&#x540C;&#x6B65;&#x5DE5;&#x5177; CookieCloud &#x81EA;&#x67B6;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x955C;&#x50CF; https://github.com/easychen/CookieCloud&#xD;
+&#xD;
+YouTube: https://www.youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Backup: Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:8088]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Cookiecloud_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1696729408</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8088" Default="8088" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8088</Config>
+  <Config Name="URL Prefix" Target="API_ROOT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/ck</Config>
+  <Config Name="Data Path" Target="/data/api/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/CookieCloud</Config>
+</Container>
