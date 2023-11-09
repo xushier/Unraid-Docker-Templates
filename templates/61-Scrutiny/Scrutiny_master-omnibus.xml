@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Scrutiny</Name>
+  <Repository>ghcr.io/analogj/scrutiny:master-omnibus</Repository>
+  <Registry>https://github.com/AnalogJ/scrutiny/pkgs/container/scrutiny</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/AnalogJ/scrutiny</Project>
+  <Overview>Hard Drive S.M.A.R.T Monitoring, Historical Trends and Real World Failure Thresholds&#xD;
+&#xD;
+YouTube: https://www.youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>HomeAutomation: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Scrutiny_A.png</Icon>
+  <ExtraParams>--cap-add=SYS_RAWIO --cap-add=SYS_ADMIN</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699500465</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Udev Path" Target="/run/udev" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false">/run/udev</Config>
+  <Config Name="Disk Path" Target="/dev/disk" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false">/dev/disk</Config>
+  <Config Name="Web Port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Config Path" Target="/opt/scrutiny/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Scrutiny/config</Config>
+  <Config Name="Database Path" Target="/opt/scrutiny/influxdb" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Scrutiny/influxdb</Config>
+</Container>
