@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Adminer</Name>
+  <Repository>adminer:4.8.1</Repository>
+  <Registry>http://hub.docker.com/_/adminer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/vrana/adminer</Project>
+  <Overview>Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.&#xD;
+&#xD;
+Go to  https://github.com/vrana/adminer/tree/master/designs for themes&#xD;
+Plugins: https://github.com/vrana/adminer/tree/master/plugins&#xD;
+&#xD;
+YouTube: https://youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8078]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Adminer_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699499024</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8078</Config>
+  <Config Name="Theme" Target="ADMINER_DESIGN" Default="flat" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">hydra</Config>
+  <Config Name="Plugins" Target="ADMINER_PLUGINS" Default="" Mode="{3}" Description="e.g. ADMINER_PLUGINS='tables-filter tinymce'" Type="Variable" Display="always" Required="false" Mask="false">json-column</Config>
+</Container>
