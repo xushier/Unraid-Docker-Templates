@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Syncthing</Name>
+  <Repository>linuxserver/syncthing:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/syncthing</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-syncthing/issues/new/choose</Support>
+  <Project>https://syncthing.net</Project>
+  <Overview>Syncthing(https://syncthing.net) replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.&#xD;
+&#xD;
+YouTube: https://youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Backup: Cloud: Network:Other Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8384]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Syncthing_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1704172151</DateInstalled>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <Requires/>
+  <Config Name="Web Port" Target="8384" Default="8384" Mode="tcp" Description="Application WebUI" Type="Port" Display="always" Required="true" Mask="false">9384</Config>
+  <Config Name="Listen Port TCP" Target="22000" Default="22000" Mode="tcp" Description="Listening port (TCP)" Type="Port" Display="always" Required="true" Mask="false">22002</Config>
+  <Config Name="Listen Port UDP" Target="22000" Default="22000" Mode="udp" Description="Listening port (UDP)" Type="Port" Display="always" Required="true" Mask="false">22002</Config>
+  <Config Name="Discovery Port" Target="21027" Default="21027" Mode="udp" Description="Protocol discovery" Type="Port" Display="always" Required="true" Mask="false">21228</Config>
+  <Config Name="Data Path" Target="/data1" Default="" Mode="rw" Description="Data1" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Sync</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Syncthing</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

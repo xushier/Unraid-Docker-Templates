@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>IT-Tools</Name>
+  <Repository>corentinth/it-tools</Repository>
+  <Registry>https://hub.docker.com/r/corentinth/it-tools</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/CorentinTh/it-tools/issues</Support>
+  <Project>https://it-tools.tech</Project>
+  <Overview>Collection of handy online tools for developers, with great UX as a web app.&#xD;
+&#xD;
+https://it-tools.tech&#xD;
+&#xD;
+YouTube: https://www.youtube.com/channel/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;&#xD;
+</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:3084]</WebUI>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Ittools_A.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1704183335</DateInstalled>
+  <Requires/>
+  <Config Name="WebUI Port" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3084</Config>
+</Container>

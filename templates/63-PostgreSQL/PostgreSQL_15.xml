@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Postgresql_15</Name>
+  <Repository>postgres:15</Repository>
+  <Registry>https://registry.hub.docker.com/_/postgres</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/69483-support-jj9987-postgresql/</Support>
+  <Project>https://www.postgresql.org</Project>
+  <Overview>PostgreSQL 15 is a powerful, open source object-relational database system. Uses official Postgres Docker image @ https://hub.docker.com/_/postgres/&#xD;
+Configuration&#xD;
+/mnt/cache/appdata/postgresql15 This is where Postgres will store it's data. For best performance, keep the files on cache drive.&#xD;
+Port 5432 Default connection port&#xD;
+POSTGRES_PASSWORD Superuser password. REQUIRED TO SET, otherwise connecting outside container will not be possible.&#xD;
+POSTGRES_USER Username for the superuser. Defaults to postgres if not set.&#xD;
+POSTGRES_DB Used to define different name for default database. Defaults to user if not set.&#xD;
+&#xD;
+YouTube: https://youtube.com/@xiaoditx&#xD;
+Templates: https://github.com/xushier/Unraid-Docker-Templates&#xD;
+Icons: https://github.com/xushier/HD-Icons&#xD;
+BiliBili: https://space.bilibili.com/32313260&#xD;
+Blog: https://www.xdtx.cc&#xD;
+QQ Group: 647605169&#xD;
+WeChat: &#x5C0F;&#x8FEA;&#x540C;&#x5B66;</Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <Icon>https://cdn.jsdelivr.net/gh/xushier/HD-Icons@master/border-radius/Postgresql_A.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1704172911</DateInstalled>
+  <Requires/>
+  <Config Name="Superuser Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always" Required="true" Mask="true">Your Password</Config>
+  <Config Name="Superuser" Target="POSTGRES_USER" Default="" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">Your Username</Config>
+  <Config Name="Initial Database Name" Target="POSTGRES_DB" Default="" Mode="" Description="Initial database name (default: postgres)" Type="Variable" Display="always" Required="false" Mask="false">Your Database Name</Config>
+  <Config Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="" Mode="rw" Description="PostgreSQL data storage location" Type="Path" Display="always" Required="true" Mask="null">/mnt/user/appdata/Postgresql_15</Config>
+  <Config Name="PostgreSQL Access Port" Target="5432" Default="" Mode="tcp" Description="PostgreSQL TCP connection port" Type="Port" Display="always-hide" Required="true" Mask="null">5432</Config>
+</Container>
